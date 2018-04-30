@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AuthenticationDemo.LoginPage">
+    <ContentPage.Content>
+        <StackLayout 
+            x:Name="LoginLayout"
+            VerticalOptions="StartAndExpand"
+            Padding="30">
+            
+            <Label 
+                x:Name="UsernameLabel" 
+                Text="Username"
+                AutomationId="UsernameLabel"/>
+
+            <Entry 
+                x:Name="UsernameField"
+                Placeholder="username (demo)"
+                AutomationId="UsernameField"/>
+
+            <Label
+                x:Name="PasswordLabel"
+                Text="Password" 
+                AutomationId="PasswordLabel"/>
+
+            <Entry
+                x:Name="PasswordField"
+                Placeholder="password (demo)"
+                AutomationId="PasswordField"/>
+
+            <Button
+                x:Name="LoginButton"
+                Text="Login"
+                AutomationId="LoginButton"/>
+
+            <ActivityIndicator 
+                x:Name="LoginProgressIndicator" 
+                AutomationId="LoginProgressIndicator"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
