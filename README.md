@@ -1,6 +1,6 @@
 # XamarinDemos
 
-Sample Xamarin demos using the DotNetSDK. Download this repo to find several example projects demonstrating different aspects of functionality.
+Sample Xamarin using the .NET SDK. Download this repo to find several example projects demonstrating different aspects of functionality.
 
 ### Steps To Run
 
