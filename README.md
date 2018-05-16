@@ -4,10 +4,13 @@ Sample Xamarin using the .NET SDK. Download this repo to find several example pr
 
 ### Steps To Run
 
-1. Ensure you have Visual Studio installed
-2. Open the solution
-3. Restore NuGet packages
-4. Build and run on device of choice
+1. Install Visual Studio (Community Edition works fine)
+2. Clone or download this repository
+3. After opening Visual Studio, press `Open…` and find the `PredixSDKXamarinDemos.sln` file
+4. Wait for packages/dependencies to restore, this may take a minute
+	- Note: If on BLUESSO, restore may fail as we’re downloading external packages.
+5. Click `AuthenticationDemo` on the top-left and select `AuthenticationDemo.iO`
+6. Hit the run button on.
 
 -----
 
