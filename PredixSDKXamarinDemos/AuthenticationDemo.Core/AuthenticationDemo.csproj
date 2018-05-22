@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
-    <PackageReference Include="PredixSDKForWindows" Version="1.0.0-pre-1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="OnlineAPIPage.xaml.cs">
