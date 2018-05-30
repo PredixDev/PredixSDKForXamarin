@@ -20,6 +20,8 @@ namespace DatabaseDemo
         
         private void OpenDatabase()
         {
+			_config = Database.Configuration.GetDefaultConfiguration();
+			Database.Delete(_config);
 			_database = Database.Open(create: true);
         }
 
