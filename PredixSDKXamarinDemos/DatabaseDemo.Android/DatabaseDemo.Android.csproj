@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D7019A8-D36D-4D11-AA90-0C89ADAA5458}</ProjectGuid>
+    <ProjectGuid>{3C81405B-50EC-461A-B411-4C27819FC43B}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AuthenticationDemo.Droid</RootNamespace>
-    <AssemblyName>AuthenticationDemo.Android</AssemblyName>
+    <RootNamespace>DatabaseDemo.Droid</RootNamespace>
+    <AssemblyName>DatabaseDemo.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -96,9 +96,9 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AuthenticationDemo\AuthenticationDemo.csproj">
-      <Project>{70231F99-8074-439E-B6EC-3D802684E2BF}</Project>
-      <Name>AuthenticationDemo</Name>
+    <ProjectReference Include="..\DatabaseDemo\DatabaseDemo.csproj">
+      <Project>{F14E17E3-55E9-436C-9912-5F712103E5AC}</Project>
+      <Name>DatabaseDemo</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
