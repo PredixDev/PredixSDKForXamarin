@@ -5,13 +5,13 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace DatabaseDemo
 {
-    public partial class App : Application
+	public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new DatabaseDemoPage());
         }
 
         protected override void OnStart()
