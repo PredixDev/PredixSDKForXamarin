@@ -12,6 +12,16 @@ namespace AuthenticationDemo
         private string clientSecret = "test123";
         private string serverEndPointURL = "";
 
+        /// <summary>
+        /// Performs the login async
+		/// 
+		/// Note: You may have to update your iOS/Android/UWP projects to use the 
+		/// latest version of TLS and HttpClient if login seems to fail.
+		/// 
+		/// More details can be found here: 
+		/// https://docs.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/transport-layer-security
+        /// </summary>
+		/// 
 		public async Task<AuthenticationResult> PerformLoginAsync(string username, string password)
         {
             // Creates an authentication manager configuration configured for your UAA instance.  

@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CA82B4B7-EC62-4F14-A0BC-DF47FA08888E}</ProjectGuid>
+    <ProjectGuid>{6D6EE020-91A1-426E-B1B8-6125D1A600EC}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AuthenticationDemo.iOS</RootNamespace>
+    <RootNamespace>DatabaseDemo.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>AuthenticationDemo.iOS</AssemblyName>
+    <AssemblyName>DatabaseDemo.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -146,11 +146,14 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="PredixSDKForWindows">
+      <HintPath>..\..\..\..\..\.nuget\packages\predixsdk\1.0.3\lib\netstandard2.0\PredixSDKForWindows.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AuthenticationDemo\AuthenticationDemo.csproj">
-      <Project>{70231F99-8074-439E-B6EC-3D802684E2BF}</Project>
-      <Name>AuthenticationDemo</Name>
+    <ProjectReference Include="..\DatabaseDemo\DatabaseDemo.csproj">
+      <Project>{C79E7DD4-A8A4-42FC-BFFA-433A7D3E655A}</Project>
+      <Name>DatabaseDemo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

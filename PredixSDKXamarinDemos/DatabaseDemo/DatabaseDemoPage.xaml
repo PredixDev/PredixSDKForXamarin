@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DatabaseDemo.DatabaseDemoPage">
+    <ContentPage.Content>
+        <StackLayout 
+            x:Name="MainLayout" 
+            Padding="20">
+            
+            <Button 
+                x:Name="OpenDatabaseButton" 
+                Text="Open Database"
+                Command="{Binding OpenDatabaseCommand}" 
+                AutomationId="OpenDatabaseButton"/>
+            
+            <Button 
+                x:Name="AddDocumentsButton" 
+                Text="Add Documents to Database" 
+                Command="{Binding AddDocumentsCommand}" 
+                AutomationId="AddDocumentsButton"/>
+            
+            <Button 
+                x:Name="ViewDataButton" 
+                Text="View Fetched Data" 
+                AutomationId="ViewDataButton"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
