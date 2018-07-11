@@ -24,6 +24,7 @@
             <Entry
                 x:Name="PasswordField"
                 Placeholder="password (demo)"
+                IsPassword="true" 
                 AutomationId="PasswordField"/>
 
             <Button
