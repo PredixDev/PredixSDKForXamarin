@@ -29,6 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,9 +47,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="PredixSDKForWindows">
-      <HintPath>..\..\..\..\..\.nuget\packages\predixsdk\1.0.3\lib\netstandard2.0\PredixSDKForWindows.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
@@ -58,6 +56,9 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
     <PackageReference Include="Xamarin.Forms">
       <Version>2.5.1.527436</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.KeyChain">
+      <Version>1.0.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

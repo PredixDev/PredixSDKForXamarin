@@ -27,6 +27,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -145,9 +146,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="PredixSDKForWindows">
-      <HintPath>..\..\..\..\..\.nuget\packages\predixsdk\1.0.3\lib\netstandard2.0\PredixSDKForWindows.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AuthenticationDemo\AuthenticationDemo.csproj">

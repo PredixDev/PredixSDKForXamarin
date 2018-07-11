@@ -27,6 +27,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -151,7 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DatabaseDemo\DatabaseDemo.csproj">
-      <Project>{F14E17E3-55E9-436C-9912-5F712103E5AC}</Project>
+      <Project>{C79E7DD4-A8A4-42FC-BFFA-433A7D3E655A}</Project>
       <Name>DatabaseDemo</Name>
     </ProjectReference>
   </ItemGroup>
