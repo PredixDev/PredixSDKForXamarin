@@ -13,6 +13,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.527436" />
-    <PackageReference Include="PredixSDK" Version="1.0.0.15-alpha" />
+    <PackageReference Include="PredixSDK" Version="1.0.0.19-alpha" />
   </ItemGroup>
 </Project>
