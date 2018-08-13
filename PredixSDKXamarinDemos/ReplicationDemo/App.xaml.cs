@@ -11,7 +11,7 @@ namespace ReplicationDemo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ReplicationDemoPage());
         }
 
         protected override void OnStart()
