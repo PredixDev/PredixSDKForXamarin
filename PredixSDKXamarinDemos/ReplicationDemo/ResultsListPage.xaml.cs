@@ -31,11 +31,10 @@ namespace ReplicationDemo
             if (_detailPage == null)
                 _detailPage = new ResultDetailPage();
 
-            // TODO: Work on attachment support
-            //int index = ViewModel.FetchedResultsData.IndexOf(e.SelectedItem as Document);
-            //var attachment = ViewModel.FetchedAttachmentData[index];
+            int index = ViewModel.FetchedResultsData.IndexOf(e.SelectedItem as FruitDocument);
+            var attachment = ViewModel.FetchedAttachmentData[index];
 
-            _detailPage.BindingContext = new ResultDetailViewModel(e.SelectedItem as FruitDocument);
+            _detailPage.BindingContext = new ResultDetailViewModel(e.SelectedItem as FruitDocument, attachment);
             Navigation.PushAsync(_detailPage);
         }
     }

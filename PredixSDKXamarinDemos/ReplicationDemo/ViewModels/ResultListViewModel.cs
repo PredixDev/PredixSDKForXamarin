@@ -7,38 +7,27 @@ namespace ReplicationDemo
     public class ResultListViewModel
     {
         ObservableCollection<FruitDocument> _fetchedResultsData = new ObservableCollection<FruitDocument>();
-        //ObservableCollection<Attachment> _fetchedAttachmentData = new ObservableCollection<Attachment>();
+        ObservableCollection<FruitAttachment> _fetchedAttachmentData = new ObservableCollection<FruitAttachment>();
 
         public ObservableCollection<FruitDocument> FetchedResultsData
         {
             get { return _fetchedResultsData; }
             set { _fetchedResultsData = value; }
-
-            // // Previous Block
-            // get { return _fetchedResultsData; }
-            // set { RaiseAndUpdate(ref _fetchedResultsData, value); }
         }
 
-        //public ObservableCollection<Attachment> FetchedAttachmentData
-        //{
-        //    get { return _fetchedAttachmentData; }
-        //    set { RaiseAndUpdate(ref _fetchedAttachmentData, value); }
-        //}
-
-        //public ResultListViewModel(ObservableCollection<ReplicationDataItem> resultsList)
-        //{
-        //    foreach (var item in resultsList)
-        //    {
-        //        _fetchedResultsData.Add(item.Document);
-        //        //_fetchedAttachmentData.Add(item.Attachment);
-        //    }
-        //}
-
-        public ResultListViewModel(ObservableCollection<FruitDocument> resultsList)
+        public ObservableCollection<FruitAttachment> FetchedAttachmentData
         {
-            _fetchedResultsData = resultsList;
+            get { return _fetchedAttachmentData; }
+            set { _fetchedAttachmentData = value; }
+        }
+
+        public ResultListViewModel(ObservableCollection<ReplicationDataItem> resultsList)
+        {
+            foreach (var item in resultsList)
+            {
+                _fetchedResultsData.Add(item.Document);
+                _fetchedAttachmentData.Add(item.Attachment);
+            }
         }
     }
-
-
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PredixSDKForWindows.Authentication;
@@ -105,8 +106,9 @@ namespace ReplicationDemo
         {
             try
             {
-                // Clear database so we can start from fresh, then open the database
                 _databaseConfig = Database.OpenDatabaseConfiguration.Default;
+
+                // Clear database so we can start from fresh, then open the database
                 await Database.Delete(_databaseConfig);
                 _database = Database.Open(configuration: _databaseConfig, create: true);
 
@@ -121,9 +123,9 @@ namespace ReplicationDemo
             }
         }
 
-        public ObservableCollection<FruitDocument> FetchDocuments()
+        public ObservableCollection<ReplicationDataItem> FetchDocuments()
         {
-            var documents = new ObservableCollection<FruitDocument>();
+            var documents = new ObservableCollection<ReplicationDataItem>();
             var tasks = new Task[_rowCount];
 
             // Fetch documents from the database
@@ -132,9 +134,13 @@ namespace ReplicationDemo
 
                 tasks[i] = _database.FetchDocument(i.ToString(), (result) =>
                 {
-                    var propertiesJson = JsonConvert.SerializeObject(result.ToDictionary());
-                    var documentData = JsonConvert.DeserializeObject<FruitDocument>(propertiesJson);
-                    documents.Add(documentData);
+                    var documentData = JsonConvert.SerializeObject(result.ToDictionary());
+                    var attachmentData = result.Attachments[0].Data;
+
+                    FruitDocument document = JsonConvert.DeserializeObject<FruitDocument>(documentData);
+                    FruitAttachment attachment = new FruitAttachment() { imageData = attachmentData.ToArray() };
+
+                    documents.Add(new ReplicationDataItem() { Document = document, Attachment = attachment });
                 });
             }
 
@@ -193,7 +199,7 @@ namespace ReplicationDemo
             Console.WriteLine(_statusText);
         }
 
-        // Called replication is complete, even if replication failed.
+        // Called when replication is complete, even if replication failed.
         public void ReplicationDidComplete(Database database, ReplicationDetails details)
         {
             if (_rowCount > 0)

@@ -13,7 +13,7 @@ namespace ReplicationDemo
         {
             InitializeComponent();
             FruitName.SetBinding(Label.TextProperty, nameof(ResultDetailViewModel.FruitName));
-            //FruitImage.Source = ImageSource.FromStream(() => new MemoryStream(ViewModel.imageData));
+            FruitImage.Source = ImageSource.FromStream(() => new MemoryStream(ViewModel.imageData));
             Notes.SetBinding(Label.TextProperty, nameof(ResultDetailViewModel.Notes));
         }
     }

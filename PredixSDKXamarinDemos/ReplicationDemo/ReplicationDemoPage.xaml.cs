@@ -7,7 +7,7 @@ namespace ReplicationDemo
 {
     public partial class ReplicationDemoPage : ContentPage
     {
-        private ResultsListPage _resultsListPage;
+        private ResultsListPage _resultsPage;
 
         public ReplicationDemoPage()
         {
@@ -33,13 +33,13 @@ namespace ReplicationDemo
 
         async void ViewDataButton_Clicked(object sender, System.EventArgs e)
         {
-            if (_resultsListPage == null)
-                _resultsListPage = new ResultsListPage();
+            if (_resultsPage == null)
+                _resultsPage = new ResultsListPage();
 
             var viewModel = (MainPageViewModel)BindingContext;
-            var documents = viewModel.FetchDocuments();
-            _resultsListPage.BindingContext = new ResultListViewModel(documents);
-            await Navigation.PushAsync(_resultsListPage);
+            var documentResults = viewModel.FetchDocuments();
+            _resultsPage.BindingContext = new ResultListViewModel(documentResults);
+            await Navigation.PushAsync(_resultsPage);
         }
     }
 }
