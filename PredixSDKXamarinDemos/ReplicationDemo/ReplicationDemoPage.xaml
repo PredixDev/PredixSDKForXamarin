@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ReplicationDemo.ReplicationDemoPage"
+             Title="Replication Demo">
+
+    <ContentPage.Content>
+        <StackLayout
+            x:Name="LoginLayout"
+            VerticalOptions="StartAndExpand"
+            Padding="30">  <!-- TODO: Experiment with this! -->
+
+            <Label 
+                x:Name="UsernameLabel" 
+                Text="Username" 
+                AutomationId="UsernameLabel"/>
+
+            <Entry 
+                x:Name="UsernameField"
+                Placeholder="username (demo)" 
+                AutomationId="UsernameField"/>
+            <Label
+                x:Name="PasswordLabel"
+                Text="Password" 
+                AutomationId="PasswordLabel"/>
+
+            <Entry
+                x:Name="PasswordField"
+                Placeholder="password (demo)" 
+                IsPassword="true" 
+                AutomationId="PasswordField"/>
+
+            <Button
+                x:Name="LoginButton"
+                Text="Login" 
+                AutomationId="LoginButton"/>
+               
+            <ActivityIndicator 
+                x:Name="LoginProgressIndicator" 
+                AutomationId="LoginProgressIndicator"/>
+
+            <Label
+                x:Name="StatusLabel"
+                XAlign="Center"
+                Text="" 
+                WidthRequest="300"
+                HeightRequest="400"
+                AutomationId="StatusLabel"/>
+            
+            <Button 
+                x:Name="ViewDataButton" 
+                Text="View Fetched Data" 
+                AutomationId="ViewDataButton"
+                IsEnabled="false"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

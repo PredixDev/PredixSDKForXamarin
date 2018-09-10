@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D7019A8-D36D-4D11-AA90-0C89ADAA5458}</ProjectGuid>
+    <ProjectGuid>{45DA9C74-D8D2-4680-AD0A-0CD71E02408E}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AuthenticationDemo.Droid</RootNamespace>
-    <AssemblyName>AuthenticationDemo.Android</AssemblyName>
+    <RootNamespace>ReplicationDemo.Droid</RootNamespace>
+    <AssemblyName>ReplicationDemo.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -29,7 +29,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -104,9 +103,9 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AuthenticationDemo\AuthenticationDemo.csproj">
-      <Project>{70231F99-8074-439E-B6EC-3D802684E2BF}</Project>
-      <Name>AuthenticationDemo</Name>
+    <ProjectReference Include="..\ReplicationDemo\ReplicationDemo.csproj">
+      <Project>{E5746A8B-B8D1-4C6B-BB02-4A6522048AD3}</Project>
+      <Name>ReplicationDemo</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
