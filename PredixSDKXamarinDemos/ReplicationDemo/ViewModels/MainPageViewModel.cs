@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace ReplicationDemo
 {
-    public class MainPageViewModel : ReplicationStatusDelegate
+    public class MainPageViewModel : IReplicationStatusDelegate
     {
         private Uri _syncUri = new Uri("https://predixsdkforiosexamplesync.run.aws-usw02-pr.ice.predix.io");
         private Uri _baseUri = new Uri("https://predixsdkforiosexampleuaa.predix-uaa.run.aws-usw02-pr.ice.predix.io");
@@ -123,29 +123,25 @@ namespace ReplicationDemo
             }
         }
 
-        public ObservableCollection<ReplicationDataItem> FetchDocuments()
+        public async Task<ObservableCollection<ReplicationDataItem>> FetchDocumentsAsync()
         {
             var documents = new ObservableCollection<ReplicationDataItem>();
-            var tasks = new Task[_rowCount];
 
             // Fetch documents from the database
             for (int i = 0; i < _rowCount; i++)
             {
 
-                tasks[i] = _database.FetchDocument(i.ToString(), (result) =>
-                {
-                    var documentData = JsonConvert.SerializeObject(result.ToDictionary());
-                    var attachmentData = result.Attachments[0].Data;
+                var result = await _database.FetchDocument(i.ToString());
+                var documentData = JsonConvert.SerializeObject(result.ToDictionary());
+                var attachmentData = result.Attachments[0].Data;
 
-                    FruitDocument document = JsonConvert.DeserializeObject<FruitDocument>(documentData);
-                    FruitAttachment attachment = new FruitAttachment() { imageData = attachmentData.ToArray() };
+                FruitDocument document = JsonConvert.DeserializeObject<FruitDocument>(documentData);
+                FruitAttachment attachment = new FruitAttachment() { imageData = attachmentData.ToArray() };
 
-                    documents.Add(new ReplicationDataItem() { Document = document, Attachment = attachment });
-                });
+                documents.Add(new ReplicationDataItem() { Document = document, Attachment = attachment });
             }
 
             // Ensure each document is fetched before returning the documents
-            Task.WaitAll(tasks);
             return documents;
         }
 
@@ -177,12 +173,12 @@ namespace ReplicationDemo
         // providing information for the replication process
 
         // Since this replication is one-direction, we won't have any "sending"
-        public void ReplicationIsSending(Database database, ReplicationDetails details, int sent, int totalToSend)
+        public void ReplicationIsSending(Database database, IReplicationDetails details, int sent, int totalToSend)
         {
         }
 
         // This method is called as each batch of data is received.
-        public void ReplicationIsReceiving(Database database, ReplicationDetails details, int received, int totalToReceive)
+        public void ReplicationIsReceiving(Database database, IReplicationDetails details, int received, int totalToReceive)
         {
             _rowCount = totalToReceive - 1;
             _statusLabel.Text = $"Receiving Documents: {received} : {totalToReceive}";
@@ -191,7 +187,7 @@ namespace ReplicationDemo
         }
 
         // Replication failure. The Error object will contain details as to the error
-        public void ReplicationFailed(Database database, ReplicationDetails details, Exception error)
+        public void ReplicationFailed(Database database, IReplicationDetails details, Exception error)
         {
             _rowCount = 0;
             _statusLabel.Text = $"Replication Failed: {error}";
@@ -200,7 +196,7 @@ namespace ReplicationDemo
         }
 
         // Called when replication is complete, even if replication failed.
-        public void ReplicationDidComplete(Database database, ReplicationDetails details)
+        public void ReplicationDidComplete(Database database, IReplicationDetails details)
         {
             if (_rowCount > 0)
             {
