@@ -18,7 +18,7 @@ namespace DatabaseDemo
         private Database _database;
 
         public Command OpenDatabaseCommand => _openDatabaseCommand ?? (_openDatabaseCommand = new Command(OpenDatabase));
-        public Command AddDocumentsCommand => _addDocumentsCommand ?? (_addDocumentsCommand = new Command(AddDocuments));
+        public Command AddDocumentsCommand => _addDocumentsCommand ?? (_addDocumentsCommand = new Command(AddDocumentsAsync));
 
 		private List<string> _fruitList = new List<string>() { "Apple", "Papaya", "Peach", "Pitaya", "Passion fruit", "Banana", "Pear", "Mango", "Cherry", "Plum", "Apricot", "Lemon", "Avocado", "Fig", "Lychee", "Coconut", "Cantaloupe", "Tangerine", "Clementine", "Pineapple", "Grape", "Grapefruit", "Pomelo", "Orange", "Date palm", "Watermelon", "Kumquat", "Breadfruit", "Blueberry", "Honeydew", "Lime", "Raspberry", "Strawberry", "Tomato", "Guava", "Kiwi" };
 		private string fruitNameKey = "fruit";
@@ -38,19 +38,17 @@ namespace DatabaseDemo
 			}
         }
 
-        private void AddDocuments()
-        {         
+        private async void AddDocumentsAsync()
+        {
             // see if we have document "0", if so we've already created the sample data
-            _database.FetchDocument("0", (document) =>
+            var document = await _database.FetchDocument("0");
+            if (document == null)
             {
-				if (document == null)
-                {
-					CreateSampleDocuments();
-                }
-            });
+                await CreateSampleDocumentsAsync();
+            }
         }
 
-		private void CreateSampleDocuments()
+		private async Task CreateSampleDocumentsAsync()
         {
             _fruitList.Sort();
 
@@ -72,36 +70,30 @@ namespace DatabaseDemo
                 document.Properties[notesKey] = "";
 
                 // add the document to the database
-				_database.Add(document, (_) =>
+                var _ = await _database.Add(document);
+                fruitsAdded += 1;
+                if (fruitsAdded >= _fruitList.Count)
                 {
-                    fruitsAdded += 1;
-                    if (fruitsAdded >= _fruitList.Count)
-                    {
-                        Console.WriteLine($"Added all {fruitsAdded} fruits!");
-                    }
-                });
+                    Console.WriteLine($"Added all {fruitsAdded} fruits!");
+                }
             }
         }
 
-		public ObservableCollection<FruitDocument> FetchDocuments()
+		public async Task<ObservableCollection<FruitDocument>> FetchDocumentsAsync()
         {
             var documents = new ObservableCollection<FruitDocument>();
-			var tasks = new Task[_fruitList.Count];
 
 			// Fetch documents from the database
 			for (int i = 0; i < _fruitList.Count; i++)
             {
-
-				tasks[i] = _database.FetchDocument(i.ToString(), (result) =>
-				{
-					var propertiesJson = JsonConvert.SerializeObject(result.ToDictionary());
-                    var documentData = JsonConvert.DeserializeObject<FruitDocument>(propertiesJson);
-                    documents.Add(documentData);	
-				});
+                var result = await _database.FetchDocument(i.ToString());
+                   
+                var propertiesJson = JsonConvert.SerializeObject(result.ToDictionary());
+                var documentData = JsonConvert.DeserializeObject<FruitDocument>(propertiesJson);
+                documents.Add(documentData);
             }
 
 			// Ensure each document is fetched before returning the documents
-			Task.WaitAll(tasks);
             return documents;
         }
     }

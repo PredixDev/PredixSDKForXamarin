@@ -136,7 +136,8 @@ namespace IndexAndQueryDemo
                 var document = new Document(new Dictionary<string, object> { { _wordKey, entry.Key }, { _definitionKey, entry.Value } });
 
                 // add the document to the database
-                await _database.Add(document, (updateResult) => { rowsAdded += 1; });
+                await _database.Add(document);
+                rowsAdded += 1;
             }
         }
         

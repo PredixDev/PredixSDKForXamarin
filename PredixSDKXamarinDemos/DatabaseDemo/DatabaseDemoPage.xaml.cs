@@ -22,7 +22,7 @@ namespace DatabaseDemo
                 _resultsPage = new ResultsListPage();
 
             var viewModel = (MainPageViewModel)BindingContext;
-            var documents = viewModel.FetchDocuments();
+            var documents = await viewModel.FetchDocumentsAsync();
             _resultsPage.BindingContext = new ResultListViewModel(documents);
             await Navigation.PushAsync(_resultsPage);
         }

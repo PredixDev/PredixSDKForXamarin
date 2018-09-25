@@ -37,7 +37,7 @@ namespace ReplicationDemo
                 _resultsPage = new ResultsListPage();
 
             var viewModel = (MainPageViewModel)BindingContext;
-            var documentResults = viewModel.FetchDocuments();
+            var documentResults = await viewModel.FetchDocumentsAsync();
             _resultsPage.BindingContext = new ResultListViewModel(documentResults);
             await Navigation.PushAsync(_resultsPage);
         }
