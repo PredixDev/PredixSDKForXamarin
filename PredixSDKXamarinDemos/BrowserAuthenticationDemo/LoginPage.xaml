@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:BrowserAuthenticationDemo" 
+    x:Class="BrowserAuthenticationDemo.LoginPage"
+    Title="Browser Login Example">
+    
+    <StackLayout 
+        HorizontalOptions="CenterAndExpand" 
+        Padding="50">
+        <!-- Place new controls here -->
+        <Label 
+            x:Name="LoginPageText"
+            Text="Uses a device's native browser in accessing the UAA login to authenticate. "/>
+        
+        <Button 
+            IsVisible="true" 
+            x:Name="LoginButton" 
+            Text="Login"
+            />
+        
+        <ActivityIndicator 
+            x:Name="LoginActivityIndicator"
+            IsRunning="{Binding IsAuthenticating}"
+            IsEnabled="{Binding IsAuthenticating}"
+            VerticalOptions="CenterAndExpand"/>
+        
+        <Label 
+            x:Name="LoginAuthenticationStatus"
+            Text="{Binding AuthenticationStatus}"/>        
+        
+    </StackLayout>
+</ContentPage>
