@@ -1,9 +1,9 @@
 ﻿using System;
-using Xamarin.Forms;
+using Toolbox.Portable;
 
 namespace ReplicationDemo
 {
-    public class ResultDetailViewModel : ContentPage
+    public class ResultDetailViewModel : BaseViewModel
     {
         private readonly FruitDocument _doc;
         private readonly FruitAttachment _attachment;
@@ -22,22 +22,4 @@ namespace ReplicationDemo
         public byte[] imageData => _attachment.imageData;
         public string Notes => _doc.Notes;
     }
-
-    // TODO: Work on attachment support
-
-    //public class ResultDetailViewModel : BaseViewModel
-    //{
-    //    private readonly Document _doc;
-    //    private readonly Attachment _attachment;
-
-    //    public ResultDetailViewModel(Document doc, Attachment attachment)
-    //    {
-    //        _doc = doc;
-    //        _attachment = attachment;
-    //    }
-
-    //    public string FruitName => _doc.Fruit;
-    //    public byte[] imageData => _attachment.imageData;
-    //    public string Notes => _doc.Notes;
-    //}
 }

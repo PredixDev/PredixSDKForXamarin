@@ -42,7 +42,7 @@
             <Label
                 x:Name="StatusLabel"
                 XAlign="Center"
-                Text="" 
+                Text="{Binding Status}" 
                 WidthRequest="300"
                 HeightRequest="400"
                 AutomationId="StatusLabel"/>
@@ -51,7 +51,7 @@
                 x:Name="ViewDataButton" 
                 Text="View Fetched Data" 
                 AutomationId="ViewDataButton"
-                IsEnabled="false"/>
+                IsEnabled="{Binding CanViewData}"/>
             
         </StackLayout>
     </ContentPage.Content>
