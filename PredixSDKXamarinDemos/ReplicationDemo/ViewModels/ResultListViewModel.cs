@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.ObjectModel;
-//using Toolbox.Portable;
+﻿using System.Collections.ObjectModel;
+using Toolbox.Portable;
 
 namespace ReplicationDemo
 {
-    public class ResultListViewModel
+    public class ResultListViewModel : BaseViewModel
     {
         ObservableCollection<FruitDocument> _fetchedResultsData = new ObservableCollection<FruitDocument>();
         ObservableCollection<FruitAttachment> _fetchedAttachmentData = new ObservableCollection<FruitAttachment>();
@@ -12,13 +11,13 @@ namespace ReplicationDemo
         public ObservableCollection<FruitDocument> FetchedResultsData
         {
             get { return _fetchedResultsData; }
-            set { _fetchedResultsData = value; }
+            set { RaiseAndUpdate(ref _fetchedResultsData, value); }
         }
 
         public ObservableCollection<FruitAttachment> FetchedAttachmentData
         {
             get { return _fetchedAttachmentData; }
-            set { _fetchedAttachmentData = value; }
+            set { RaiseAndUpdate(ref _fetchedAttachmentData, value); }
         }
 
         public ResultListViewModel(ObservableCollection<ReplicationDataItem> resultsList)

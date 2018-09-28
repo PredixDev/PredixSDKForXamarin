@@ -6,31 +6,35 @@ using Newtonsoft.Json;
 using PredixSDKForWindows.Authentication;
 using PredixSDKForWindows.Networking;
 using PredixSDKForWindows.Storage;
-using Xamarin.Forms;
+using Toolbox.Portable;
 
 namespace ReplicationDemo
 {
-    public class MainPageViewModel : IReplicationStatusDelegate
+    public class MainPageViewModel : BaseViewModel, IReplicationStatusDelegate
     {
-        private Uri _syncUri = new Uri("https://predixsdkforiosexamplesync.run.aws-usw02-pr.ice.predix.io");
-        private Uri _baseUri = new Uri("https://predixsdkforiosexampleuaa.predix-uaa.run.aws-usw02-pr.ice.predix.io");
-        private string clientID = "NativeClient";
-        private string clientSecret = "test123";
-
         private Database.ReplicationConfiguration _replicationConfig;
         private Database.OpenDatabaseConfiguration _databaseConfig;
         private Database _database;
 
-        private Label _statusLabel;
-        private Button _viewDataButton;
-        private string _statusText;
+        private string _status;
+        private bool _canViewData;
         private int _rowCount;
 
-        public MainPageViewModel(Label statusLabel, Button viewDataButton)
+        #region Properties
+
+        public string Status 
         {
-            _statusLabel = statusLabel;
-            _viewDataButton = viewDataButton;
+            get { return _status; }
+            set { RaiseAndUpdate(ref _status, value); }
         }
+
+        public bool CanViewData
+        {
+            get { return _canViewData; }
+            set { RaiseAndUpdate(ref _canViewData, value); }
+        }
+
+        #endregion
 
         #region Authentication Logic
 
@@ -49,7 +53,7 @@ namespace ReplicationDemo
             // Creates an authentication manager configuration configured for your UAA instance.  
             // The baseURL, clientId and clientSecret can also be defined in your info.plist 
             // if you wish but for simplicity they're added here.
-            AuthenticationConfiguration authConfig = new AuthenticationConfiguration(_baseUri, clientID, clientSecret);
+            AuthenticationConfiguration authConfig = new AuthenticationConfiguration(Constants.UaaServer, Constants.ClientID, Constants.ClientSecret);
 
             // Give the username and password to the credential provider
             IClientCredentialProvider credentialProvider = new PredixCredentialProvider(username, password);
@@ -61,7 +65,7 @@ namespace ReplicationDemo
             // set the online handler so that the manager knows we want to autenticate online
             AuthenticationManager authenticationManager = new AuthenticationManager(authConfig, onlineAuthHandler)
             {
-                AuthorizationHandler = new PredixSyncAuthorizationHandler(_syncUri),
+                AuthorizationHandler = new PredixSyncAuthorizationHandler(Constants.SyncUri),
                 Reachability = new Reachability()
             };
 
@@ -152,13 +156,13 @@ namespace ReplicationDemo
 
         public void StartReplication()
         {
-            if (_syncUri == null)
+            if (Constants.SyncUri == null)
                 return;
 
             // start replication, for this example we're doing a non-repeating, one-direction replication.
             Console.WriteLine("Starting replication...");
 
-            _replicationConfig = Database.ReplicationConfiguration.OneTimeServerToClientReplication(_syncUri);
+            _replicationConfig = Database.ReplicationConfiguration.OneTimeServerToClientReplication(Constants.SyncUri);
             _database.StartReplication(_replicationConfig);
 
             var cookies = PredixHttpClient.CookieHandler.Cookies;
@@ -181,18 +185,18 @@ namespace ReplicationDemo
         public void ReplicationIsReceiving(Database database, IReplicationDetails details, int received, int totalToReceive)
         {
             _rowCount = totalToReceive - 1;
-            _statusLabel.Text = $"Receiving Documents: {received} : {totalToReceive}";
+            Status = $"Receiving Documents: {received} : {totalToReceive}";
 
-            Console.WriteLine(_statusText);
+            Console.WriteLine(_status);
         }
 
         // Replication failure. The Error object will contain details as to the error
         public void ReplicationFailed(Database database, IReplicationDetails details, Exception error)
         {
             _rowCount = 0;
-            _statusLabel.Text = $"Replication Failed: {error}";
+            Status = $"Replication Failed: {error}";
 
-            Console.WriteLine(_statusText);
+            Console.WriteLine(_status);
         }
 
         // Called when replication is complete, even if replication failed.
@@ -200,8 +204,8 @@ namespace ReplicationDemo
         {
             if (_rowCount > 0)
             {
-                _statusLabel.Text = "Replication Completed";
-                _viewDataButton.IsEnabled = true;
+                Status = "Replication Completed";
+                CanViewData = true;
             }
 
             Console.WriteLine($"ReplicationDidComplete: rows: {_rowCount}");

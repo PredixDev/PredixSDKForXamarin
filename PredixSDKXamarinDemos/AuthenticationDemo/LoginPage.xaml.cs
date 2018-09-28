@@ -8,6 +8,7 @@ namespace AuthenticationDemo
 	public partial class LoginPage : ContentPage
     {
         private OnlineAPIPage _onlineAPIPage;
+
         public LoginPage()
         {
             InitializeComponent();

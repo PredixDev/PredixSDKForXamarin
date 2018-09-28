@@ -7,11 +7,6 @@ namespace AuthenticationDemo
 {
 	public class LoginPageViewModel
     {
-        private Uri baseURL = new Uri("https://predixsdkforiosexampleuaa.predix-uaa.run.aws-usw02-pr.ice.predix.io");
-        private string clientID = "NativeClient";
-        private string clientSecret = "test123";
-        private string serverEndPointURL = "";
-
         /// <summary>
         /// Performs the login async
 		/// 
@@ -27,7 +22,7 @@ namespace AuthenticationDemo
             // Creates an authentication manager configuration configured for your UAA instance.  
             // The baseURL, clientId and clientSecret can also be defined in your info.plist 
             // if you wish but for simplicity they're added here.
-            AuthenticationConfiguration authConfig = new AuthenticationConfiguration(baseURL, clientID, clientSecret);
+            AuthenticationConfiguration authConfig = new AuthenticationConfiguration(Constants.UaaServer, Constants.ClientID, Constants.ClientSecret);
 
             // Give the username and password to the credential provider
             IClientCredentialProvider credentialProvider = new PredixCredentialProvider(username, password);

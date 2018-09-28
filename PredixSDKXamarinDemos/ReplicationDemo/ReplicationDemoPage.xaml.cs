@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 using Xamarin.Forms;
 
 namespace ReplicationDemo
@@ -14,7 +12,7 @@ namespace ReplicationDemo
             InitializeComponent();
             LoginButton.Clicked += LoginButton_Clicked;
             ViewDataButton.Clicked += ViewDataButton_Clicked;
-            BindingContext = new MainPageViewModel(StatusLabel, ViewDataButton);
+            BindingContext = new MainPageViewModel();
         }
 
         async void LoginButton_Clicked(object sender, System.EventArgs e)

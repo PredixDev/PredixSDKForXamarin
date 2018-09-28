@@ -37,14 +37,14 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string>Predix SDK Scheme</string>
-			<key>CFBundleURLTypes</key>
-			<string>Viewer</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>predixsdk</string>
 			</array>
+			<key>CFBundleURLName</key>
+			<string>Predix SDK Scheme</string>
+			<key>CFBundleURLTypes</key>
+			<string>Viewer</string>
 		</dict>
 	</array>
 </dict>
