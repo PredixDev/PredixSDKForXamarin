@@ -153,6 +153,9 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>3.1.0.697729</Version>
     </PackageReference>
+    <PackageReference Include="Serilog.Sinks.Xamarin">
+      <Version>0.1.29</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReplicationDemo\ReplicationDemo.csproj">

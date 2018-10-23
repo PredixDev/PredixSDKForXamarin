@@ -151,17 +151,13 @@
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PushNotificationsDemo\PushNotificationsDemo.csproj">
-      <Project>{95C9B37C-67F0-40C5-9766-7874E04B938E}</Project>
-      <Name>PushNotificationsDemo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Toolbox.Portable\Toolbox.Portable.csproj">
       <Project>{5C78552B-5615-4982-B3B6-98DF60EDEC59}</Project>
       <Name>Toolbox.Portable</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\DotNetSDK\PredixSDKForWindows\PredixSDKForWindows.csproj">
-      <Project>{1908635F-4A83-4066-B24A-8DE0AD05F4D3}</Project>
-      <Name>PredixSDKForWindows</Name>
+    <ProjectReference Include="..\PushNotificationsDemo\PushNotificationsDemo.csproj">
+      <Project>{95C9B37C-67F0-40C5-9766-7874E04B938E}</Project>
+      <Name>PushNotificationsDemo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

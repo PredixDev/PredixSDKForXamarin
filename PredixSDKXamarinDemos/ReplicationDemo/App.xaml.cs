@@ -1,4 +1,5 @@
 using System;
+using Serilog;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,10 @@ namespace ReplicationDemo
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new ReplicationDemoPage());
+            Log.Information("SERILOGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
+            Log.Debug("DEBUGGGGGGGGGGGGGGGGGGGGGGG");
+            Log.Error("ERRRRROOOOORRRRRRRRR");
         }
 
         protected override void OnStart()
