@@ -37,14 +37,14 @@ namespace PushNotificationsDemo
                     }
                     else
                     {
-                        StatusLabel.Text = "Successfull registered! Try sending a message from the Predix Mobile console";
+                        StatusLabel.Text = "Successfully registered! Try sending a message from the Predix Mobile console";
                         LoginProgressIndicator.IsRunning = false;
                     }
                 }
                 else
                 {
                     LoginProgressIndicator.IsRunning = false;
-                    StatusLabel.Text = "Already Registered. Try sending a message from the Predix Mobile console";
+                    StatusLabel.Text = "Either already registered or running into networking issues. Try sending a message from the Predix Mobile console";
                 }
             }
             else

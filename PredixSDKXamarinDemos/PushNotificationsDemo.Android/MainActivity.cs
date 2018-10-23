@@ -12,7 +12,6 @@ using Firebase;
 using System.Threading.Tasks;
 using Toolbox.Portable;
 using PredixSDKForWindows.Managers.PushNotifications;
-using Android.Widget;
 
 namespace PushNotificationsDemo.Droid
 {
@@ -41,12 +40,11 @@ namespace PushNotificationsDemo.Droid
             IsPlayServicesAvailable();
 
 #if DEBUG
-            // // Uncomment the section below to forecfully create (and register) a new token
-            //Task.Run(() =>
-            //{
-            //    FirebaseInstanceId.Instance.DeleteInstanceId();
-            //    Console.WriteLine("Forced token: " + FirebaseInstanceId.Instance.Token);
-            //});
+            Task.Run(() =>
+            {
+                FirebaseInstanceId.Instance.DeleteInstanceId();
+                Console.WriteLine("Forced token: " + FirebaseInstanceId.Instance.Token);
+            });
 #endif
         }
 
