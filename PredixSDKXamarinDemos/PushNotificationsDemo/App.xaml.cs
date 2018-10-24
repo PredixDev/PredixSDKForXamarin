@@ -1,20 +1,19 @@
-using System;
-using Serilog;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace ReplicationDemo
+namespace PushNotificationsDemo
 {
     public partial class App : Application
     {
+        public const string NotificationReceivedKey = "NotificationReceived";
+
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new ReplicationDemoPage());
-            Log.Information("SERILOGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
-            Log.Debug("DEBUGGGGGGGGGGGGGGGGGGGGGGG");
-            Log.Error("ERRRRROOOOORRRRRRRRR");
+
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

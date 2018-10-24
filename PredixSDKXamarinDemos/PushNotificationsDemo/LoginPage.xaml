@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PushNotificationsDemo" x:Class="PushNotificationsDemo.LoginPage">
+        <StackLayout 
+            x:Name="LoginLayout"
+            VerticalOptions="StartAndExpand"
+            Padding="30">
+            
+            <Label 
+                x:Name="UsernameLabel" 
+                Text="Username"
+                AutomationId="UsernameLabel"/>
+
+            <Entry 
+                x:Name="UsernameField"
+                Placeholder="username (app_user_1)"
+                
+                AutomationId="UsernameField"/>
+
+            <Label
+                x:Name="PasswordLabel"
+                Text="Password" 
+                AutomationId="PasswordLabel"/>
+
+            <Entry
+                x:Name="PasswordField"
+                Placeholder="password (App_User_111)"
+                IsPassword="true" 
+                AutomationId="PasswordField"/>
+
+            <Button
+                x:Name="LoginButton"
+                Text="Login"
+                AutomationId="LoginButton"/>
+
+            <ActivityIndicator 
+                x:Name="LoginProgressIndicator" 
+                AutomationId="LoginProgressIndicator"/>
+            
+            <Label
+                x:Name="StatusLabel"
+                VerticalOptions="FillAndExpand"
+                Text=""/>
+        
+            <Label
+                x:Name="NotificationLabel"
+                TextColor="Navy"
+                Text="{Binding NotificationMessage}"/>
+        </StackLayout>    
+</ContentPage>
