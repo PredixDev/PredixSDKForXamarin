@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using PredixSDKForWindows.Storage;
+using PredixSDKForXamarin.Storage;
 using Xamarin.Forms;
 
 namespace DatabaseDemo

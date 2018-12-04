@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using PredixSDKForWindows.Storage;
+using PredixSDKForXamarin.Storage;
 using Toolbox.Portable;
 using System.Linq;
 

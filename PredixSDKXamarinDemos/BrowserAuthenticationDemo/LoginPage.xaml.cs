@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using PredixSDKForWindows.Authentication;
+using PredixSDKForXamarin.Authentication;
 using Xamarin.Auth;
 using Xamarin.Forms;
 
