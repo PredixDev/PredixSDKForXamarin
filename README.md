@@ -6,6 +6,7 @@ The Predix SDK is a .NET library designed to make developing IIoT applications f
 - Xamarin.Forms
 - Xamarin.iOS
 - Xamarin.Android
+- Xamarin.UWP (coming in 2019)
 
 ## Download
 - [Beta Release](https://www.nuget.org/packages/PredixSDK/)
@@ -23,7 +24,7 @@ Sample Xamarin using the .NET SDK. Download this repo to find several example pr
 
 #### Resolving Dependencies
 Wait for packages/dependencies to restore, this may take a minute
-	- Note: If on BLUESSO, restore may fail as we’re downloading external packages. 
+	- ~~Note: If on BLUESSO, restore may fail as we’re downloading external packages.~~
     - You can manually restore packages clicking *Project -> Restore NuGet Packages*
 
 #### Running a Demo
