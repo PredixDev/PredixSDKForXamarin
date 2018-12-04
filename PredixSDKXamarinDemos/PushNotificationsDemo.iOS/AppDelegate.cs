@@ -4,7 +4,7 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using Toolbox.Portable;
-using PredixSDKForWindows.Managers.PushNotifications;
+using PredixSDKForXamarin.Managers.PushNotifications;
 using Xamarin.Forms;
 
 namespace PushNotificationsDemo.iOS

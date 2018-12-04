@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using PredixSDKForWindows.Authentication;
-using PredixSDKForWindows.Networking;
+using PredixSDKForXamarin.Authentication;
+using PredixSDKForXamarin.Networking;
 using Toolbox.Portable;
 using Xamarin.Forms;
 

@@ -1,5 +1,5 @@
 ﻿using Xamarin.Forms;
-using PredixSDKForWindows.Managers.PushNotifications;
+using PredixSDKForXamarin.Managers.PushNotifications;
 using Toolbox.Portable;
 
 namespace PushNotificationsDemo

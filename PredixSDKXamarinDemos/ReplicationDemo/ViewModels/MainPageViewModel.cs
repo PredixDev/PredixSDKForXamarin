@@ -3,9 +3,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using PredixSDKForWindows.Authentication;
-using PredixSDKForWindows.Networking;
-using PredixSDKForWindows.Storage;
+using PredixSDKForXamarin.Authentication;
+using PredixSDKForXamarin.Networking;
+using PredixSDKForXamarin.Storage;
 using Toolbox.Portable;
 
 namespace ReplicationDemo

@@ -11,7 +11,7 @@ using Xamarin.Forms;
 using Firebase;
 using System.Threading.Tasks;
 using Toolbox.Portable;
-using PredixSDKForWindows.Managers.PushNotifications;
+using PredixSDKForXamarin.Managers.PushNotifications;
 
 namespace PushNotificationsDemo.Droid
 {
