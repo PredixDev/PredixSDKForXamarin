@@ -35,6 +35,7 @@ namespace BrowserAuthenticationDemo.iOS
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {
             /*
+             * Example redirect:
              * "predixsdk://predixsdkforios.io/authorization_grant?code=N0pCyjLn8E&state=jojgsirrwyntpqdk"
              */
             // Convert NSUrl to Uri
