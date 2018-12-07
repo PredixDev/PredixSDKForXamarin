@@ -1,6 +1,10 @@
-# PredixSDKForDotNet 
+# PredixSDKForXamarin
 
 The Predix SDK is a .NET library designed to make developing IIoT applications for Predix for Windows and Mobile (Xamarin) fast and simple using a robust set of APIs that feel natural for a .NET developer
+
+## Features
+
+For all of the features available in the SDK please visit the [Wiki](https://github.build.ge.com/predix-mobile/PredixSDKForXamarin/wiki)
 
 ## Supported Platforms and Targets
 - Xamarin.Forms
@@ -11,22 +15,26 @@ The Predix SDK is a .NET library designed to make developing IIoT applications f
 ## Download
 - [Beta Release](https://www.nuget.org/packages/PredixSDK/)
 
+## Additional Information
+
+- For native C# documentation see the [code documentation site](https://github.build.ge.com/pages/predix-mobile/DotNetSDK/)
+- [Feature documentation and Guides](https://github.build.ge.com/predix-mobile/PredixSDKForXamarin/wiki)
+- [Getting started Guide](https://github.build.ge.com/predix-mobile/PredixSDKForXamarin/wiki/Getting-Started)
+
+## Example Projects
+[Download](https://github.build.ge.com/predix-mobile/PredixSDKForXamarin/archive/master.zip) or [browse](https://github.build.ge.com/predix-mobile/PredixSDKForXamarin/tree/master/PredixSDKXamarinDemos) this repo to find several example projects demonstrating different aspects of functionality. 
+
 ## Xamarin Demos
 
 Sample Xamarin using the .NET SDK. Download this repo to find several example projects demonstrating different aspects of functionality.
 
-### Steps To Run
+## Getting Help
 
-#### Getting Started
-1. Install Visual Studio (Community Edition works fine)
-2. Clone or download this repository
-3. After opening Visual Studio, press `Open…` and find the `PredixSDKXamarinDemos.sln` file
+- Create a [GitHub Issue](https://github.build.ge.com/predix-mobile/PredixSDKForXamarin/issues) in this project
+- Ask a question on the [Predix Developer Forum](https://forum.predix.io/index.html)
 
-#### Resolving Dependencies
-Wait for packages/dependencies to restore, this may take a minute
-	- ~~Note: If on BLUESSO, restore may fail as we’re downloading external packages.~~
-    - You can manually restore packages clicking *Project -> Restore NuGet Packages*
+## Usage Analytics
 
-#### Running a Demo
-1. Click `SomeFeatureDemo` on the top-left and select `SomeFeatureDemo.{iOS || Droid}`
-2. Click the run button to start the demo.
+The SDK collects some basic usage analytics by default.  The analytics are collected anonymously and does not track user, device, application or any other type of identifiable information.  It simply lets us know what features are in use so that we can better focus our efforts on the areas that matter most.
+
+Usage analytics can be disabled, [Learn how to opt of out usage analytics](https://github.build.ge.com/predix-mobile/PredixSDKForXamarin/wiki/Disable-Usage-Analytic-Tracking).
