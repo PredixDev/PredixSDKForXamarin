@@ -1,0 +1,956 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/212574163/PredixMobile/core_repos/DotNetSDK/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Analytics.AnalyticsSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Analytics.AnalyticsSettings.html",
+          "hash": "EancFZNcmm2JD/aIznSzHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Analytics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Analytics.html",
+          "hash": "Q5nDsJdBOlX0gRl2o4+z6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.AuthenticationConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.AuthenticationConfiguration.html",
+          "hash": "ivMkCvEl+ExYZgDOEuX3bA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.AuthenticationManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.AuthenticationManager.html",
+          "hash": "Z4l53c0TRy2N0ZiY+3oYXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.AuthenticationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.AuthenticationResult.html",
+          "hash": "ZBThRjDdHOVE0NrTFlyvDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.AuthorizationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.AuthorizationResult.html",
+          "hash": "9tUVg0dLnWdOCSVHT16qVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.IAuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.IAuthenticationHandler.html",
+          "hash": "kEpfWBmcGo5vT4jh5u5TgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.IAuthorizationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.IAuthorizationHandler.html",
+          "hash": "C4PHzjRaL5S64zTG+KDj3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.IBrowserAuthenticationDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.IBrowserAuthenticationDelegate.html",
+          "hash": "bJZ8Eo9ybSL6mGR/amPpWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.IBrowserRedirectReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.IBrowserRedirectReceiver.html",
+          "hash": "oST2/MIaU+NsxuMq+7MIZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.IClientCredentialProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.IClientCredentialProvider.html",
+          "hash": "AF5YAMOKSrQL0K6k18DUCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.IClientCredentialReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.IClientCredentialReceiver.html",
+          "hash": "5eF+ZXkVRLYsj7vCdcjzSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler.html",
+          "hash": "3H2F1JY0J4pna95tZyHKaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.OnlineAuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.OnlineAuthenticationHandler.html",
+          "hash": "Wb4q/Lj80IRm0zdZzNCpAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.PredixSyncAuthorizationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.PredixSyncAuthorizationHandler.html",
+          "hash": "Zp43GxGMwcZ4DuW/OllqIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.UaaAccessToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.UaaAccessToken.html",
+          "hash": "42rJOmvnxrG0A54BW3OAlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.UaaAuthorizationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.UaaAuthorizationHandler.html",
+          "hash": "9tqPxI/ZGyrkANN+hvb/HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.UaaBrowserAuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.UaaBrowserAuthenticationHandler.html",
+          "hash": "Yfu/V4IxCuTlbFGwfjgEHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.UaaCodeExchangeAuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.UaaCodeExchangeAuthenticationHandler.html",
+          "hash": "KijyV+CdFQU+ZvnJRCQkJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.UaaPasswordGrantAuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.UaaPasswordGrantAuthenticationHandler.html",
+          "hash": "mTS/DcdRVALMudV8iGPdMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.User.html",
+          "hash": "jAa6XL6x3prQXtA+yOaDKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.UserManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.UserManager.html",
+          "hash": "VoxqMf62OKHrL8lebqZKNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Authentication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Authentication.html",
+          "hash": "rDFw6rGuFZp+js+oAP0aaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Logging.ILogProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Logging.ILogProvider.html",
+          "hash": "3yxP4SWZYDbpwvMDjhY2Pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Logging.LogLevel.html",
+          "hash": "jPSwEM3klWwvPB6YeIpcVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Logging.LogProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Logging.LogProvider.html",
+          "hash": "RKTr0nSCf1SJKmbpVNf12g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Logging.LogProviders.LibLogException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Logging.LogProviders.LibLogException.html",
+          "hash": "CUwSQ8wP+4qdv1hsTphKpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Logging.LogProviders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Logging.LogProviders.html",
+          "hash": "zzDYZ82bsD2SCoVYYjUsOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Logging.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Logging.Logger.html",
+          "hash": "3u9jeMPhg8AU2HxoWfmMnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Logging.html",
+          "hash": "KpwH83vC1uwMLeRb4VyhKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Managers.PushNotifications.IPushNotificationRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Managers.PushNotifications.IPushNotificationRegistration.html",
+          "hash": "pOwVksU1/1cE7wssKrW2Jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Managers.PushNotifications.PushNotificationRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Managers.PushNotifications.PushNotificationRegistration.html",
+          "hash": "Hglz2UxD1F2HSfG9DhqppA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Managers.PushNotifications.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Managers.PushNotifications.html",
+          "hash": "w8zOc251U/6rWc9wB3ub1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.ICookieHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.ICookieHandler.html",
+          "hash": "rKE7QIaf9It9/YCkXXRenA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.Mocking.MockNetworkDataManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.Mocking.MockNetworkDataManager.html",
+          "hash": "6AD8Qv3qJWuBEPSYuQ5q0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.Mocking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.Mocking.html",
+          "hash": "G7itLe2ci5JbeXAvM5uphg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.PredixHttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.PredixHttpClient.html",
+          "hash": "+LclJqiL6IlagNTa+uyOdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.PredixNetworkable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.PredixNetworkable.html",
+          "hash": "KeDKALo2Y5GWJzqZXSORZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.PredixRequestMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.PredixRequestMessage.html",
+          "hash": "s1ehx2oRRwio2cQgY4H8KA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.Reachability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.Reachability.html",
+          "hash": "g2jg5RyMrJzTriH2IGUsyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.ReachabilityConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.ReachabilityConfiguration.html",
+          "hash": "2enm5PGmnhAake3GrsMmYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.ReachabilityState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.ReachabilityState.html",
+          "hash": "+QYwvHp9RCUs+6bfIFju6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.ReachabilityStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.ReachabilityStatus.html",
+          "hash": "x9zcSAlH+cuQEsA06f3J2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Networking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Networking.html",
+          "hash": "d58nopm1rGLBe6S/8Zmhxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.AddIndexRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.AddIndexRow.html",
+          "hash": "RQ5rh/rLtwDXzscq/6nf0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Attachment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Attachment.html",
+          "hash": "pRzTSmnRXDmIdkW5mh54Kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Database.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Database.Configuration.html",
+          "hash": "zRbKr0FxKAV4GTTQ/NdZDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Database.Index.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Database.Index.html",
+          "hash": "so77luZWGq+oZzyUTUtRag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Database.OpenDatabaseConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Database.OpenDatabaseConfiguration.html",
+          "hash": "2wP/dROrndlLzgtR8LDRwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Database.ReplicationConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Database.ReplicationConfiguration.html",
+          "hash": "hBED9OqVmWQewIlSopLD/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Database.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Database.html",
+          "hash": "lUjPXbv6z9Gp9XFPINTRTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Document.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Document.Metadata.html",
+          "hash": "aMhWLavs2UCsTc3VfjGbXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.Document.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.Document.html",
+          "hash": "S0so5/AHtE9RXNi857xXTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.DocumentAttachment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.DocumentAttachment.html",
+          "hash": "cDNcVgRYnNU/1zGYbMhGGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.IIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.IIndexer.html",
+          "hash": "RfSmj3JAgbhJhPUu1PNupg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.IQueryParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.IQueryParameters.html",
+          "hash": "GBAKDhUtHeQi5iXRgvbh0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.IReplicationDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.IReplicationDetails.html",
+          "hash": "BNUDp6e0ZiQNtw3kMcKXlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.IReplicationFilterDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.IReplicationFilterDelegate.html",
+          "hash": "d5EcS4b/RPee5OhObCV2XQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.IReplicationStatusDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.IReplicationStatusDelegate.html",
+          "hash": "RAt0ukUqog6M4316t7/e3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.MapDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.MapDelegate.html",
+          "hash": "TgA+Pd3HWI0r67Fmw7/NXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.QueryByKeyList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.QueryByKeyList.html",
+          "hash": "zWKqh/FglU49rGToLN7Eyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.QueryByKeyRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.QueryByKeyRange.html",
+          "hash": "WudYK11WEEzeEzqvPT7h6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.QueryObserver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.QueryObserver.html",
+          "hash": "O49bDOnD/ODBosC0DQGDaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.QueryResultEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.QueryResultEnumerator.html",
+          "hash": "+IYN8zKAbLCniJWfjs6t5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.QueryResultRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.QueryResultRow.html",
+          "hash": "pXM/+IpKc9ArrPbScTxCAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.ReduceDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.ReduceDelegate.html",
+          "hash": "ozN3mkVhMRz6HZFiBbhV2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.ReplicationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.ReplicationOptions.html",
+          "hash": "yeCGSXHbPc+IMTHERPmwTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.UpdateResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.UpdateResult-1.html",
+          "hash": "wKb14Zdd54f52gdXZ9GGCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PredixSDKForXamarin.Storage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PredixSDKForXamarin.Storage.html",
+          "hash": "dJr1Xjjre6DrrwhDEamPjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "f4SY53EbIh8FylRDY6X9XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "ESCnAlyEgnRBVfouqqn8tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/details1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/details1.html",
+          "hash": "Wch9HJjKVYauYEOFUmezEA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "kt0FQINymnTf6AE+daktMw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Ngxc+cgsDX+kvrPBmKU3XA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "1Xdjw8Ib7j95/TiJDj+CFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

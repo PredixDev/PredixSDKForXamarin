@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Database.ReplicationConfiguration
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Database.ReplicationConfiguration
+   ">
+    <meta name="generator" content="docfx 2.38.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration">
+  
+  
+  <h1 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration" class="text-break">Class Database.ReplicationConfiguration
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Database.ReplicationConfiguration</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PredixSDKForWindows.Storage.IReplicationDetails.html">IReplicationDetails</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PredixSDKForWindows.Storage.html">PredixSDKForWindows.Storage</a></h6>
+  <h6><strong>Assembly</strong>: PredixSDKForWindows.dll</h6>
+  <h5 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ReplicationConfiguration : IReplicationDetails</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration__ctor_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.#ctor*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration__ctor_System_Uri_System_Boolean_System_Boolean_PredixSDKForWindows_Storage_ReplicationOptions_System_Collections_Generic_IDictionary_System_String_System_Object__System_Collections_Generic_List_System_String__" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.#ctor(System.Uri,System.Boolean,System.Boolean,PredixSDKForWindows.Storage.ReplicationOptions,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.List{System.String})">ReplicationConfiguration(Uri, Boolean, Boolean, ReplicationOptions, IDictionary&lt;String, Object&gt;, List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a ReplicationConfiguration structure with the provided parameters.</p>
+<p>Defaults to a repeating, bi-directional configuration.</p>
+<ul>
+<li>parameter url: URL to the Predix Sync offline database service instance</li>
+<li>parameter isRepeating: This replication should be continous, or not.</li>
+<li>parameter isBidirectional: Data replication should be both directions: client to server and server to client, or one-way: only server to client.</li>
+<li>parameter options: An optional JSON-compatible dictionary of additional advanced properties that can be used to tweak replication.</li>
+<li>parameter filterParameters: Optional parameters sent to the <code>ReplicationFilterDelegate</code> during document evaluation</li>
+<li>parameter limitToChannels: A list of server-side defined channels.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReplicationConfiguration(Uri url, bool isRepeating = true, bool isBidirectional = true, ReplicationOptions options = null, IDictionary&lt;string, object&gt; filterParameters = null, List&lt;string&gt; limitToChannels = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isRepeating</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBidirectional</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.ReplicationOptions.html">ReplicationOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">filterParameters</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">limitToChannels</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_FilterParameters_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.FilterParameters*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_FilterParameters" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.FilterParameters">FilterParameters</h4>
+  <div class="markdown level1 summary"><p>Optional parameters sent to the <code>ReplicationFilterDelegate</code> during document evaluation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, object&gt; FilterParameters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_IsBidirectional_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.IsBidirectional*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_IsBidirectional" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.IsBidirectional">IsBidirectional</h4>
+  <div class="markdown level1 summary"><p>Indicates the data replication should be both directions: client to server and server to client, or one-way: only server to client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBidirectional { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_IsRepeating_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.IsRepeating*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_IsRepeating" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.IsRepeating">IsRepeating</h4>
+  <div class="markdown level1 summary"><p>Indicates this replication should be continous, or not.</p>
+<p>A repeating replication detects and automatically syncs data changes until explicitly stopped by calling <code>stopReplication</code> whereas a non-repeating replication syncs data with the service instance once then stops.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRepeating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_LimitToChannels_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.LimitToChannels*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_LimitToChannels" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.LimitToChannels">LimitToChannels</h4>
+  <div class="markdown level1 summary"><p>A list of server-side defined channels.
+If this list is empty, then all documents in all channels the user has access to are sent to the client.</p>
+<p>If this property contains a list of channels, then only documents in those channels are sent to the client.</p>
+<p>Example:**</p>
+<p>User has access to <code>channel1</code>, <code>channel2</code>, and <code>channel3</code></p>
+<p><code>channel1</code> contains documents: <code>docA</code>, and <code>docB</code></p>
+<p><code>channel2</code> contains documents: <code>docC</code>, and <code>docD</code></p>
+<p><code>channel3</code> contains documents: <code>docE</code>, and <code>docF</code></p>
+<p>If <code>LimitToChannels = {}</code> then documents <code>docA</code>, <code>docB</code>, <code>docC</code>, <code>docD</code>, <code>docE</code>, and <code>docF</code> are sent to the client</p>
+<p>If <code>LimitToChannels = { &amp;quot;channel1&amp;quot;, &amp;quot;channel3&amp;quot; }</code> then documents <code>docA</code>, <code>docB</code>, <code>docE</code>, and <code>docF</code> are sent to the client</p>
+<p>If <code>LimitToChannels = { &amp;quot;channel4&amp;quot; }</code> then no documents are sent to the client (since the user doesn't have access to <code>channel4</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; LimitToChannels { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_Options_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.Options*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_Options" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.Options">Options</h4>
+  <div class="markdown level1 summary"><p>An optional JSON-compatible dictionary of additional advanced properties that can be used to tweak replication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReplicationOptions Options { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.ReplicationOptions.html">ReplicationOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_Url_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.Url*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_Url" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.Url">Url</h4>
+  <div class="markdown level1 summary"><p>URL to the Predix Sync offline database service instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Uri Url { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_OneTimeBidirectionalReplication_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.OneTimeBidirectionalReplication*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_OneTimeBidirectionalReplication_System_Uri_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.OneTimeBidirectionalReplication(System.Uri)">OneTimeBidirectionalReplication(Uri)</h4>
+  <div class="markdown level1 summary"><p>Returns a pre-configured one-time, bi-directional replication configuration to the provided URL</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Database.ReplicationConfiguration OneTimeBidirectionalReplication(Uri url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.html">Database.ReplicationConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_OneTimeServerToClientReplication_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.OneTimeServerToClientReplication*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_OneTimeServerToClientReplication_System_Uri_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.OneTimeServerToClientReplication(System.Uri)">OneTimeServerToClientReplication(Uri)</h4>
+  <div class="markdown level1 summary"><p>Returns a pre-configured one-time replication configuration for downloading changes from the server to the client from the provided URL</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Database.ReplicationConfiguration OneTimeServerToClientReplication(Uri url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.html">Database.ReplicationConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_RepeatingBidirectionalReplication_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.RepeatingBidirectionalReplication*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationConfiguration_RepeatingBidirectionalReplication_System_Uri_" data-uid="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.RepeatingBidirectionalReplication(System.Uri)">RepeatingBidirectionalReplication(Uri)</h4>
+  <div class="markdown level1 summary"><p>Returns a pre-configured repeating and bi-directional replication configuration to the provided URL</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Database.ReplicationConfiguration RepeatingBidirectionalReplication(Uri url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.html">Database.ReplicationConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PredixSDKForWindows.Storage.IReplicationDetails.html">IReplicationDetails</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

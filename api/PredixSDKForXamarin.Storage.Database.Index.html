@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct Database.Index
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct Database.Index
+   ">
+    <meta name="generator" content="docfx 2.38.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PredixSDKForXamarin.Storage.Database.Index">
+  
+  
+  <h1 id="PredixSDKForXamarin_Storage_Database_Index" data-uid="PredixSDKForXamarin.Storage.Database.Index" class="text-break">Struct Database.Index
+  </h1>
+  <div class="markdown level0 summary"><p>Indexer implemenation to define a Database index used to query the database</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PredixSDKForXamarin.Storage.IIndexer.html">IIndexer</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PredixSDKForXamarin.Storage.html">PredixSDKForXamarin.Storage</a></h6>
+  <h6><strong>Assembly</strong>: PredixSDKForXamarin.dll</h6>
+  <h5 id="PredixSDKForXamarin_Storage_Database_Index_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Index : IIndexer</code></pre>
+  </div>
+  <h5 id="PredixSDKForXamarin_Storage_Database_Index_examples"><strong>Examples</strong></h5>
+  <pre><code>var index = new Database.Index(name: &quot;myView&quot;, version: &quot;1.0&quot;, map: (document, addrow) =>
+{
+    var type = document.GetValueOrNull(&quot;type&quot;)
+    if (type != null)
+    {
+        addRow(type, null);
+    }
+});
+
+var config = new Database.OpenDatabaseConfiguration(index: new[]{ index })</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="PredixSDKForXamarin_Storage_Database_Index__ctor_" data-uid="PredixSDKForXamarin.Storage.Database.Index.#ctor*"></a>
+  <h4 id="PredixSDKForXamarin_Storage_Database_Index__ctor_System_String_System_String_PredixSDKForXamarin_Storage_MapDelegate_PredixSDKForXamarin_Storage_ReduceDelegate_" data-uid="PredixSDKForXamarin.Storage.Database.Index.#ctor(System.String,System.String,PredixSDKForXamarin.Storage.MapDelegate,PredixSDKForXamarin.Storage.ReduceDelegate)">Index(String, String, MapDelegate, ReduceDelegate)</h4>
+  <div class="markdown level1 summary"><p>Initialization of new Index</p>
+<ul>
+<li>important: <em>Versioning:</em></li>
+</ul>
+<p>Once created, a database index is stored as part of the data in database, for this reason, changes to an index require special handling.</p>
+<p>If any part of the <code>map</code> function or <code>reduce</code> function change, the <code>version</code> string should be changed to ensure the index is properly updated.
+Failure to change this value when updating the code will lead to unpredicable results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Index(string name, string version, MapDelegate map, ReduceDelegate reduce = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the index, required to run queries against the index</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Version of the index. <em>See Versioning above</em></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Storage.MapDelegate.html">MapDelegate</a></td>
+        <td><span class="parametername">map</span></td>
+        <td><p>closure that defines the index. For further information see the <code>Map</code> property</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Storage.ReduceDelegate.html">ReduceDelegate</a></td>
+        <td><span class="parametername">reduce</span></td>
+        <td><p>Optional <code>Reduce</code> closure that performs summarization during queries. For further information see the <code>reduce</code> property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForXamarin_Storage_Database_Index__ctor_System_String_System_String_PredixSDKForXamarin_Storage_MapDelegate_PredixSDKForXamarin_Storage_ReduceDelegate__examples">Examples</h5>
+  <pre><code>var index = new Database.Index(name: &quot;myView&quot;, version: &quot;1.0&quot;, map: (document, addrow) =>
+{
+    var type = document.GetValueOrNull(&quot;type&quot;)
+    if (type != null)
+    {
+        addRow(type, null);
+    }
+}); 
+
+var config = new Database.OpenDatabaseConfiguration(index: new[]{ index })</code></pre>
+
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PredixSDKForXamarin_Storage_Database_Index_Map_" data-uid="PredixSDKForXamarin.Storage.Database.Index.Map*"></a>
+  <h4 id="PredixSDKForXamarin_Storage_Database_Index_Map" data-uid="PredixSDKForXamarin.Storage.Database.Index.Map">Map</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapDelegate Map { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Storage.MapDelegate.html">MapDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForXamarin_Storage_Database_Index_Name_" data-uid="PredixSDKForXamarin.Storage.Database.Index.Name*"></a>
+  <h4 id="PredixSDKForXamarin_Storage_Database_Index_Name" data-uid="PredixSDKForXamarin.Storage.Database.Index.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForXamarin_Storage_Database_Index_Reduce_" data-uid="PredixSDKForXamarin.Storage.Database.Index.Reduce*"></a>
+  <h4 id="PredixSDKForXamarin_Storage_Database_Index_Reduce" data-uid="PredixSDKForXamarin.Storage.Database.Index.Reduce">Reduce</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReduceDelegate Reduce { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Storage.ReduceDelegate.html">ReduceDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForXamarin_Storage_Database_Index_Version_" data-uid="PredixSDKForXamarin.Storage.Database.Index.Version*"></a>
+  <h4 id="PredixSDKForXamarin_Storage_Database_Index_Version" data-uid="PredixSDKForXamarin.Storage.Database.Index.Version">Version</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PredixSDKForXamarin.Storage.IIndexer.html">IIndexer</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

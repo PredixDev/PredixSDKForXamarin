@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AuthenticationManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AuthenticationManager
+   ">
+    <meta name="generator" content="docfx 2.38.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager">
+  
+  
+  <h1 id="PredixSDKForXamarin_Authentication_AuthenticationManager" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager" class="text-break">Class AuthenticationManager
+  </h1>
+  <div class="markdown level0 summary"><p>AuthenticationManager manages the overall authentication, authorization, and deauthentication process.</p>
+<p>The AuthenticationManager determines what type of authentication is needed based on the current system state and the provided configuration, and then passes detailed authentication tasks to AuthenticationHandler modules. Each implementer of the AuthenticationHandler protocol should implement one type of authentication.
+In this way, based on configuration, AuthenticationManager will automatically handle online and offline authentication and if so configured will utilize biometric authentication (Touch ID or Face ID) for subsequent authentications after an initial online login was performed successfully.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AuthenticationManager</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PredixSDKForXamarin.Authentication.html">PredixSDKForXamarin.Authentication</a></h6>
+  <h6><strong>Assembly</strong>: PredixSDKForXamarin.dll</h6>
+  <h5 id="PredixSDKForXamarin_Authentication_AuthenticationManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuthenticationManager</code></pre>
+  </div>
+  <h5 id="PredixSDKForXamarin_Authentication_AuthenticationManager_examples"><strong>Examples</strong></h5>
+  <pre><code>// First, create and populate our configuration
+var url = new Uri(&quot;https://auth.myserver.com&quot;);
+var config = new AuthenticationConfiguration(uaaUrl: url)
+{
+    ClientId = &quot;my_oauth_client_id&quot;,
+    ClientSecret = &quot;my_oauth_client_secret&quot;,
+};
+
+// Set a credential provider as needed (some class providing username/password input from user)
+IClientCredentialProvider credentialProvider = this;
+
+// Set delegates as needed
+IBrowserAuthenticationDelegate browserDelegate = this
+
+// Create an online handler so that we can tell the authentication manager we want to authenticate online
+var onlineHandler = new UaaBrowserAuthenticationHandler(redirectURI: &quot;predixmobile://foobar&quot;, browserDelegate);
+
+// Similarly, assign an OfflineAuthenticationHandler for offline authentication support
+var offlineHandler = new OfflineAuthenticationHandler(credentialProvider)
+
+// Next, create an AuthenticationManager object with the configuration
+AuthenticationManager authenticationManager = new AuthenticationManager(config, onlineHandler, offlineHandler)
+{
+   AuthorizationHandler = new UaaAuthorizationHandler(),
+};
+
+// Then call authenticate. The completionHandler will be called when the authentication process finishes.
+return await authenticationManager.Authenticate();</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="PredixSDKForXamarin_Authentication_AuthenticationManager__ctor_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.#ctor*"></a>
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager__ctor_PredixSDKForXamarin_Authentication_AuthenticationConfiguration_PredixSDKForXamarin_Authentication_IAuthenticationHandler_PredixSDKForXamarin_Authentication_OfflineAuthenticationHandler_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.#ctor(PredixSDKForXamarin.Authentication.AuthenticationConfiguration,PredixSDKForXamarin.Authentication.IAuthenticationHandler,PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler)">AuthenticationManager(AuthenticationConfiguration, IAuthenticationHandler, OfflineAuthenticationHandler)</h4>
+  <div class="markdown level1 summary"><p>Initializes and returns an <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationManager.html">AuthenticationManager</a> object with the provided configuration and handlers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthenticationManager(AuthenticationConfiguration configuration, IAuthenticationHandler onlineAuthenticationHandler, OfflineAuthenticationHandler offlineAuthenticationHandler = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationConfiguration.html">AuthenticationConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Configuration for this manager.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.IAuthenticationHandler.html">IAuthenticationHandler</a></td>
+        <td><span class="parametername">onlineAuthenticationHandler</span></td>
+        <td><p>Online authentication handler. <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationManager.html#PredixSDKForXamarin_Authentication_AuthenticationManager_OnlineAuthenticationHandler">OnlineAuthenticationHandler</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler.html">OfflineAuthenticationHandler</a></td>
+        <td><span class="parametername">offlineAuthenticationHandler</span></td>
+        <td><p>Optional offline authentication handler. <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationManager.html#PredixSDKForXamarin_Authentication_AuthenticationManager_OfflineAuthenticationHandler">OfflineAuthenticationHandler</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForXamarin_Authentication_AuthenticationManager__ctor_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.#ctor*"></a>
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager__ctor_PredixSDKForXamarin_Authentication_AuthenticationConfiguration_PredixSDKForXamarin_Authentication_OfflineAuthenticationHandler_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.#ctor(PredixSDKForXamarin.Authentication.AuthenticationConfiguration,PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler)">AuthenticationManager(AuthenticationConfiguration, OfflineAuthenticationHandler)</h4>
+  <div class="markdown level1 summary"><p>Initializes and returns an <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationManager.html">AuthenticationManager</a> object with the provided configuration and only offline handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthenticationManager(AuthenticationConfiguration configuration, OfflineAuthenticationHandler offlineAuthenticationHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationConfiguration.html">AuthenticationConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Configuration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler.html">OfflineAuthenticationHandler</a></td>
+        <td><span class="parametername">offlineAuthenticationHandler</span></td>
+        <td><p>Offline authentication handler.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_AuthorizationHandler" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.AuthorizationHandler">AuthorizationHandler</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="PredixSDKForXamarin.Authentication.IAuthorizationHandler.html">IAuthorizationHandler</a> object that processes authorization after a user has been authenticated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAuthorizationHandler AuthorizationHandler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.IAuthorizationHandler.html">IAuthorizationHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_Configuration" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.Configuration">Configuration</h4>
+  <div class="markdown level1 summary"><p>the <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationConfiguration.html">AuthenticationConfiguration</a> this manager has been instantiated with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly AuthenticationConfiguration Configuration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationConfiguration.html">AuthenticationConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_OfflineAuthenticationHandler" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.OfflineAuthenticationHandler">OfflineAuthenticationHandler</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler.html">OfflineAuthenticationHandler</a> that processes authentication requests while offline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly OfflineAuthenticationHandler OfflineAuthenticationHandler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.OfflineAuthenticationHandler.html">OfflineAuthenticationHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_OnlineAuthenticationHandler" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.OnlineAuthenticationHandler">OnlineAuthenticationHandler</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="PredixSDKForXamarin.Authentication.IAuthenticationHandler.html">IAuthenticationHandler</a> that processes authentication requests while online.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly IAuthenticationHandler OnlineAuthenticationHandler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.IAuthenticationHandler.html">IAuthenticationHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForXamarin_Authentication_AuthenticationManager_OnlineAuthenticationHandler_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><a class="xref" href="PredixSDKForXamarin.Authentication.OnlineAuthenticationHandler.html">OnlineAuthenticationHandler</a></p>
+</div>
+  
+  
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_Reachability" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.Reachability">Reachability</h4>
+  <div class="markdown level1 summary"><p>Reachability instance used to determine connectivity status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Reachability Reachability</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Networking.Reachability.html">Reachability</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForXamarin_Authentication_AuthenticationManager_Reachability_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Note: This property defaults to a shared Reachability instacnce.
+<a class="xref" href="PredixSDKForXamarin.Networking.Reachability.html">Reachability</a></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PredixSDKForXamarin_Authentication_AuthenticationManager_AccessToken_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.AccessToken*"></a>
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_AccessToken" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.AccessToken">AccessToken</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="PredixSDKForXamarin.Authentication.UaaAccessToken.html">UaaAccessToken</a> that was received from a successful UAA authentication</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UaaAccessToken AccessToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForXamarin.Authentication.UaaAccessToken.html">UaaAccessToken</a></td>
+        <td><p>The access token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PredixSDKForXamarin_Authentication_AuthenticationManager_Authenticate_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.Authenticate*"></a>
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_Authenticate" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.Authenticate">Authenticate()</h4>
+  <div class="markdown level1 summary"><p>Starts the authentication/authorization process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AuthenticationResult&gt; Authenticate()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationResult.html">AuthenticationResult</a>&gt;</td>
+        <td><p>Status of the completed authentication process. <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationResult.html">AuthenticationResult</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForXamarin_Authentication_AuthenticationManager_Logout_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.Logout*"></a>
+  <h4 id="PredixSDKForXamarin_Authentication_AuthenticationManager_Logout_System_Action_" data-uid="PredixSDKForXamarin.Authentication.AuthenticationManager.Logout(System.Action)">Logout(Action)</h4>
+  <div class="markdown level1 summary"><p>Logs user out of the system, by calling the Logout methods on the manager's <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationManager.html#PredixSDKForXamarin_Authentication_AuthenticationManager_OnlineAuthenticationHandler">OnlineAuthenticationHandler</a> and <a class="xref" href="PredixSDKForXamarin.Authentication.AuthenticationManager.html#PredixSDKForXamarin_Authentication_AuthenticationManager_OfflineAuthenticationHandler">OfflineAuthenticationHandler</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Logout(Action completionHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">completionHandler</span></td>
+        <td><p>Closure called when logout has completed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForXamarin_Authentication_AuthenticationManager_Logout_System_Action__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This also clears the UserManager's authorized user information, and clears any session cookies from <span class="xref">async</span> platform's cookie storage.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

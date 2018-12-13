@@ -1,0 +1,1124 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Database
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Database
+   ">
+    <meta name="generator" content="docfx 2.38.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PredixSDKForWindows.Storage.Database">
+  
+  
+  <h1 id="PredixSDKForWindows_Storage_Database" data-uid="PredixSDKForWindows.Storage.Database" class="text-break">Class Database
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Database</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PredixSDKForWindows.Storage.html">PredixSDKForWindows.Storage</a></h6>
+  <h6><strong>Assembly</strong>: PredixSDKForWindows.dll</h6>
+  <h5 id="PredixSDKForWindows_Storage_Database_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Database</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationFilterDelegate" data-uid="PredixSDKForWindows.Storage.Database.ReplicationFilterDelegate">ReplicationFilterDelegate</h4>
+  <div class="markdown level1 summary"><p>Delegate to exclude documents from being sent to the server during replication</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReplicationFilterDelegate ReplicationFilterDelegate</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.IReplicationFilterDelegate.html">IReplicationFilterDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="PredixSDKForWindows_Storage_Database_ReplicationStatusDelegate" data-uid="PredixSDKForWindows.Storage.Database.ReplicationStatusDelegate">ReplicationStatusDelegate</h4>
+  <div class="markdown level1 summary"><p>Delegate to monitor replication status events</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReplicationStatusDelegate ReplicationStatusDelegate</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.IReplicationStatusDelegate.html">IReplicationStatusDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_CurrentReplicationDetails_" data-uid="PredixSDKForWindows.Storage.Database.CurrentReplicationDetails*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_CurrentReplicationDetails" data-uid="PredixSDKForWindows.Storage.Database.CurrentReplicationDetails">CurrentReplicationDetails</h4>
+  <div class="markdown level1 summary"><p>Configuration details for the active replication, or null if there is no active replication.</p>
+<p>Will be null if a non-repeating replication has completed, or failed, or if a repeating replication has been stopped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReplicationDetails CurrentReplicationDetails { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.IReplicationDetails.html">IReplicationDetails</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_OpenConfiguration_" data-uid="PredixSDKForWindows.Storage.Database.OpenConfiguration*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_OpenConfiguration" data-uid="PredixSDKForWindows.Storage.Database.OpenConfiguration">OpenConfiguration</h4>
+  <div class="markdown level1 summary"><p>The configuration for this Database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Database.Configuration OpenConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.Configuration.html">Database.Configuration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_TotalDocumentCount_" data-uid="PredixSDKForWindows.Storage.Database.TotalDocumentCount*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_TotalDocumentCount" data-uid="PredixSDKForWindows.Storage.Database.TotalDocumentCount">TotalDocumentCount</h4>
+  <div class="markdown level1 summary"><p>Returns the total number of documents currently stored in the local database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TotalDocumentCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The document count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_Database_TotalDocumentCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the number of documents is greater than Int.max, will return Int.max</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Add_" data-uid="PredixSDKForWindows.Storage.Database.Add*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Add_PredixSDKForWindows_Storage_Document_" data-uid="PredixSDKForWindows.Storage.Database.Add(PredixSDKForWindows.Storage.Document)">Add(Document)</h4>
+  <div class="markdown level1 summary"><p>Adds a document to the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;UpdateResult&lt;Document&gt;&gt; Add(Document document)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a> to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult</a>&lt;<a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a>&gt;&gt;</td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult&lt;T&gt;</a> of the operation containing the added Document if successful, or if unsuccessful an Error describing the failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_Database_Add_PredixSDKForWindows_Storage_Document__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If a document with the same Id already exists in the database the operation will fail.</p>
+</div>
+  <h5 id="PredixSDKForWindows_Storage_Database_Add_PredixSDKForWindows_Storage_Document__examples">Examples</h5>
+  <pre><code>  var myDocument = new Document()
+  myDocument.Properties[&quot;someKey&quot;] = &quot;someValue&quot;
+
+  var result = await database.Add(myDocument);
+  if (result.Payload != null)
+  {
+      Console.WriteLine($&quot;added document with id: {result.Payload.id)&quot;); 
+  }
+  else
+  {
+      Console.WriteLine($&quot;encountered error adding document: {result.Error});
+  }</code></pre>
+
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_AllDatabaseNames_" data-uid="PredixSDKForWindows.Storage.Database.AllDatabaseNames*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_AllDatabaseNames_System_Uri_" data-uid="PredixSDKForWindows.Storage.Database.AllDatabaseNames(System.Uri)">AllDatabaseNames(Uri)</h4>
+  <div class="markdown level1 summary"><p>Returns an array of the names of databases already created on the current device under the provided file location</p>
+<ul>
+<li>parameter underLocation: File location URL under which to search for existing databases</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; AllDatabaseNames(Uri underLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">underLocation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Close_" data-uid="PredixSDKForWindows.Storage.Database.Close*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Close" data-uid="PredixSDKForWindows.Storage.Database.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Closes the database.</p>
+<p>Once closed, the <code>Database</code> instance is no longer valid; no methods should be called on the Database object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Close()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Delete_" data-uid="PredixSDKForWindows.Storage.Database.Delete*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Delete" data-uid="PredixSDKForWindows.Storage.Database.Delete">Delete()</h4>
+  <div class="markdown level1 summary"><p>Closes, then deletes the database, removing all associated files from the file system.</p>
+<p>Once deleted, the <code>Database</code> instance is no longer valid; no methods should be called on the Database object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Delete()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Delete_" data-uid="PredixSDKForWindows.Storage.Database.Delete*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Delete_PredixSDKForWindows_Storage_Database_Configuration_" data-uid="PredixSDKForWindows.Storage.Database.Delete(PredixSDKForWindows.Storage.Database.Configuration)">Delete(Database.Configuration)</h4>
+  <div class="markdown level1 summary"><p>Deletes the database with the given configuration, removing all associated files from the file system.
+If the specified database is open, it will first be closed before being deleted.
+Does nothing if no database with the provided name exists.</p>
+<ul>
+<li>parameter configuration: Configuration of database to delete.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task Delete(Database.Configuration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.Configuration.html">Database.Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Delete_" data-uid="PredixSDKForWindows.Storage.Database.Delete*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Delete_System_String_" data-uid="PredixSDKForWindows.Storage.Database.Delete(System.String)">Delete(String)</h4>
+  <div class="markdown level1 summary"><p>Deletes a document in the database with the given Id.</p>
+<p>Does nothing if no document with the provided Id exists.</p>
+<pre><code>  var updateResult = await database.Delete(withId: &quot;document1&quot;);
+  if (result.Payload != null)
+  {
+      Console.WriteLine($&quot;updated document with id: {result.Payload)&quot;); 
+  }
+      else
+  {
+      Console.WriteLine($&quot;encountered error updating document: {result.Error});
+  }</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;UpdateResult&lt;string&gt;&gt; Delete(string withId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">withId</span></td>
+        <td><p>Id of the document to delete</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult</a>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult&lt;T&gt;</a> of the operation containing the id of the deleted document if successful, or if unsuccessful an Error describing the failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_FetchDocument_" data-uid="PredixSDKForWindows.Storage.Database.FetchDocument*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_FetchDocument_System_String_" data-uid="PredixSDKForWindows.Storage.Database.FetchDocument(System.String)">FetchDocument(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieve a document from the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Document&gt; FetchDocument(string withId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">withId</span></td>
+        <td><p>Id of the document to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a>&gt;</td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a>, or null if <a class="xref" href="PredixSDKForWindows.Storage.Database.html">Database</a> is closed or no document existed with the given Id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_Database_FetchDocument_System_String__examples">Examples</h5>
+  <pre><code>  var document = await myDatabase.FetchDocument(&quot;document1&quot;)
+  if (document != null)
+  {
+      Console.WriteLine(&quot;Document retrieved&quot;);
+  }</code></pre>
+
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_FetchDocuments_" data-uid="PredixSDKForWindows.Storage.Database.FetchDocuments*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_FetchDocuments_System_Collections_Generic_List_System_String__" data-uid="PredixSDKForWindows.Storage.Database.FetchDocuments(System.Collections.Generic.List{System.String})">FetchDocuments(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieve multiple documents from the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IDictionary&lt;string, Document&gt;&gt; FetchDocuments(List&lt;string&gt; withIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">withIds</span></td>
+        <td><p>An array of document Ids to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a>&gt;&gt;</td>
+        <td><p>A dictionary, keyed by document id of retrieved documents.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_Database_FetchDocuments_System_Collections_Generic_List_System_String___examples">Examples</h5>
+  <pre><code>  var idList = new List&lt;string&lt;{ &quot;document1&quot;, &quot;document2&quot;, &quot;document3&quot; };
+
+  var documents = await myDatabase.FetchDocuments(idList);
+  if (documents != null)
+  {
+      Console.WriteLine($&quot;Document retrieved {documents.Count} documents&quot;);
+  } </code></pre>
+
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_ObserveQuery_" data-uid="PredixSDKForWindows.Storage.Database.ObserveQuery*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_ObserveQuery_System_String_PredixSDKForWindows_Storage_IQueryParameters_System_Action_PredixSDKForWindows_Storage_QueryResultEnumerator__" data-uid="PredixSDKForWindows.Storage.Database.ObserveQuery(System.String,PredixSDKForWindows.Storage.IQueryParameters,System.Action{PredixSDKForWindows.Storage.QueryResultEnumerator})">ObserveQuery(String, IQueryParameters, Action&lt;QueryResultEnumerator&gt;)</h4>
+  <div class="markdown level1 summary"><p>Runs and observes a query on a defined index. The provided changeHandler closure will be called after the query is first run, then anytime the query results change.</p>
+<p>When a query is observed, the index will continued to be monitored, and if any changes to the database occur that result in changes to the query results, the associated changeHandler will be called.</p>
+<p>Changes will continue to be monitored until the returned QueryObserver is passed to the <code>removeQueryObserver</code> method.</p>
+<p>See also: <a class="xref" href="PredixSDKForWindows.Storage.Database.html#PredixSDKForWindows_Storage_Database_RemoveObserver_PredixSDKForWindows_Storage_QueryObserver_">RemoveObserver(QueryObserver)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueryObserver ObserveQuery(string index, IQueryParameters parameters, Action&lt;QueryResultEnumerator&gt; changeHandler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Name of index. See <code>IndexDefinition</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.IQueryParameters.html">IQueryParameters</a></td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p><code>QueryParameters</code>-based protocol implementer defining the query to run.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="PredixSDKForWindows.Storage.QueryResultEnumerator.html">QueryResultEnumerator</a>&gt;</td>
+        <td><span class="parametername">changeHandler</span></td>
+        <td><p>Change handler which will be called with query results on query completion.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.QueryObserver.html">QueryObserver</a></td>
+        <td><p>The query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_Database_ObserveQuery_System_String_PredixSDKForWindows_Storage_IQueryParameters_System_Action_PredixSDKForWindows_Storage_QueryResultEnumerator___examples">Examples</h5>
+  <pre><code>var parameters = new QueryByKeyList(
+var parameters = new QueryByKeyList();
+parameters.Keys = new[] { &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; };
+
+var queryTask = await myDatabase.RunQuery(index: &quot;MyView&quot;, parameters: parameters);
+
+//do something with query results after...</code></pre>
+
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Open_" data-uid="PredixSDKForWindows.Storage.Database.Open*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Open_PredixSDKForWindows_Storage_Database_OpenDatabaseConfiguration_System_Boolean_" data-uid="PredixSDKForWindows.Storage.Database.Open(PredixSDKForWindows.Storage.Database.OpenDatabaseConfiguration,System.Boolean)">Open(Database.OpenDatabaseConfiguration, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Database Open(Database.OpenDatabaseConfiguration configuration = null, bool create = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.OpenDatabaseConfiguration.html">Database.OpenDatabaseConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">create</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.html">Database</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_OpenedWith_" data-uid="PredixSDKForWindows.Storage.Database.OpenedWith*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_OpenedWith_PredixSDKForWindows_Storage_Database_Configuration_" data-uid="PredixSDKForWindows.Storage.Database.OpenedWith(PredixSDKForWindows.Storage.Database.Configuration)">OpenedWith(Database.Configuration)</h4>
+  <div class="markdown level1 summary"><p>Returns an open database object for the matching configuration, if a database matching the configuration has already been opened.</p>
+<p>If no database matching the configuration is open, then the <code>Database.Open()</code> must first be called to open the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Database OpenedWith(Database.Configuration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.Configuration.html">Database.Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.html">Database</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_PrepareForShutdown_" data-uid="PredixSDKForWindows.Storage.Database.PrepareForShutdown*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_PrepareForShutdown" data-uid="PredixSDKForWindows.Storage.Database.PrepareForShutdown">PrepareForShutdown()</h4>
+  <div class="markdown level1 summary"><p>Closes all open databases, and releases all resources</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task PrepareForShutdown()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_RemoveObserver_" data-uid="PredixSDKForWindows.Storage.Database.RemoveObserver*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_RemoveObserver_PredixSDKForWindows_Storage_QueryObserver_" data-uid="PredixSDKForWindows.Storage.Database.RemoveObserver(PredixSDKForWindows.Storage.QueryObserver)">RemoveObserver(QueryObserver)</h4>
+  <div class="markdown level1 summary"><p>Stops observing the query established with a <code>ObserveQuery()</code> call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveObserver(QueryObserver observer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.QueryObserver.html">QueryObserver</a></td>
+        <td><span class="parametername">observer</span></td>
+        <td><p>QueryObserver returned from `ObserveQuery() call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_Database_RemoveObserver_PredixSDKForWindows_Storage_QueryObserver__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>See Also:</p>
+<ul>
+<li><a class="xref" href="PredixSDKForWindows.Storage.Database.html#PredixSDKForWindows_Storage_Database_ObserveQuery_System_String_PredixSDKForWindows_Storage_IQueryParameters_System_Action_PredixSDKForWindows_Storage_QueryResultEnumerator__">ObserveQuery(String, IQueryParameters, Action&lt;QueryResultEnumerator&gt;)</a></li>
+</ul>
+</div>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_RunQuery_" data-uid="PredixSDKForWindows.Storage.Database.RunQuery*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_RunQuery_System_String_PredixSDKForWindows_Storage_IQueryParameters_" data-uid="PredixSDKForWindows.Storage.Database.RunQuery(System.String,PredixSDKForWindows.Storage.IQueryParameters)">RunQuery(String, IQueryParameters)</h4>
+  <div class="markdown level1 summary"><p>Runs a query on a defined index</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;QueryResultEnumerator&gt; RunQuery(string index, IQueryParameters parameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Name of index. See <code>IndexDefinition</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.IQueryParameters.html">IQueryParameters</a></td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p><code>QueryParameters</code>-based protocol implementer defining the query to run.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="PredixSDKForWindows.Storage.QueryResultEnumerator.html">QueryResultEnumerator</a>&gt;</td>
+        <td><p>The query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_Database_RunQuery_System_String_PredixSDKForWindows_Storage_IQueryParameters__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>See Also:</p>
+<ul>
+<li><a class="xref" href="PredixSDKForWindows.Storage.QueryResultEnumerator.html">QueryResultEnumerator</a></li>
+<li><a class="xref" href="PredixSDKForWindows.Storage.QueryByKeyList.html">QueryByKeyList</a></li>
+<li><a class="xref" href="PredixSDKForWindows.Storage.QueryByKeyRange.html">QueryByKeyRange</a></li>
+</ul>
+</div>
+  <h5 id="PredixSDKForWindows_Storage_Database_RunQuery_System_String_PredixSDKForWindows_Storage_IQueryParameters__examples">Examples</h5>
+  <pre><code>var parameters = new QueryByKeyList(
+var parameters = new QueryByKeyList();
+parameters.Keys = new[] { &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; };
+
+var queryTask = await myDatabase.RunQuery(index: &quot;MyView&quot;, parameters: parameters);
+
+//do something with query results after...</code></pre>
+
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Save_" data-uid="PredixSDKForWindows.Storage.Database.Save*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Save_PredixSDKForWindows_Storage_Document_" data-uid="PredixSDKForWindows.Storage.Database.Save(PredixSDKForWindows.Storage.Document)">Save(Document)</h4>
+  <div class="markdown level1 summary"><p>Saves a document to the database.</p>
+<p>If a document with the same Id already exists in the database, the existing document will be replaced.
+If no previous document exists, the document will be created.</p>
+<p>Example:</p>
+<pre><code>  var myDocument = new Document() ;
+  myDocument.Properties[&quot;someKey&quot;] = &quot;someValue&quot;;
+
+  var result = await database.Save(myDocument);
+  if (result.Payload != null)
+  {
+      Console.WriteLine($&quot;updated document with id: {result.Payload.id)&quot;); 
+  }
+  else
+  {
+      Console.WriteLine($&quot;encountered error updating document: {result.Error});
+  }</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;UpdateResult&lt;Document&gt;&gt; Save(Document document)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a> to save.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult</a>&lt;<a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a>&gt;&gt;</td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult&lt;T&gt;</a> of the operation containing the saved Document if successful, or if unsuccessful an Error describing the failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_StartReplication_" data-uid="PredixSDKForWindows.Storage.Database.StartReplication*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_StartReplication_PredixSDKForWindows_Storage_Database_ReplicationConfiguration_" data-uid="PredixSDKForWindows.Storage.Database.StartReplication(PredixSDKForWindows.Storage.Database.ReplicationConfiguration)">StartReplication(Database.ReplicationConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Starts data replication for this Database between the client and server based on the provided <code>ReplicationConfiguration</code></p>
+<p>Replaces (and stops) any previously existing replication for this Database before starting replication based on the provided configuration.</p>
+<ul>
+<li>parameter configuration: a <code>ReplicationConfiguration</code> structure defining the replication type, location and other properties.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StartReplication(Database.ReplicationConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Database.ReplicationConfiguration.html">Database.ReplicationConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_StopReplication_" data-uid="PredixSDKForWindows.Storage.Database.StopReplication*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_StopReplication" data-uid="PredixSDKForWindows.Storage.Database.StopReplication">StopReplication()</h4>
+  <div class="markdown level1 summary"><p>Stops the replication for this Database.
+Does nothing if no replication is currently configured for this Database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopReplication()</code></pre>
+  </div>
+  
+  
+  <a id="PredixSDKForWindows_Storage_Database_Update_" data-uid="PredixSDKForWindows.Storage.Database.Update*"></a>
+  <h4 id="PredixSDKForWindows_Storage_Database_Update_PredixSDKForWindows_Storage_Document_" data-uid="PredixSDKForWindows.Storage.Database.Update(PredixSDKForWindows.Storage.Document)">Update(Document)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing document in the database.</p>
+<p>If there is no document with the same Id in the database, the operation fails.</p>
+<p>Example:</p>
+<pre><code>  myDocument.Properties[&quot;someKey&quot;] = &quot;someNewValue&quot;
+
+  var result = await database.Update(myDocument);
+  if (result.Payload != null)
+  {
+      Console.WriteLine($&quot;updated document with id: {result.Payload.id)&quot;); 
+  }
+  else
+  {
+      Console.WriteLine($&quot;encountered error updating document: {result.Error});
+  }</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;UpdateResult&lt;Document&gt;&gt; Update(Document document)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a> to update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult</a>&lt;<a class="xref" href="PredixSDKForWindows.Storage.Document.html">Document</a>&gt;&gt;</td>
+        <td><p>The <a class="xref" href="PredixSDKForWindows.Storage.UpdateResult-1.html">UpdateResult&lt;T&gt;</a> of the operation containing the updated Document if successful, or if unsuccessful an Error describing the failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IIndexer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IIndexer
+   ">
+    <meta name="generator" content="docfx 2.38.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PredixSDKForWindows.Storage.IIndexer">
+  
+  
+  <h1 id="PredixSDKForWindows_Storage_IIndexer" data-uid="PredixSDKForWindows.Storage.IIndexer" class="text-break">Interface IIndexer
+  </h1>
+  <div class="markdown level0 summary"><p>Creates a Database index used to then query the database</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PredixSDKForWindows.Storage.html">PredixSDKForWindows.Storage</a></h6>
+  <h6><strong>Assembly</strong>: PredixSDKForWindows.dll</h6>
+  <h5 id="PredixSDKForWindows_Storage_IIndexer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IIndexer</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Storage_IIndexer_Map_" data-uid="PredixSDKForWindows.Storage.IIndexer.Map*"></a>
+  <h4 id="PredixSDKForWindows_Storage_IIndexer_Map" data-uid="PredixSDKForWindows.Storage.IIndexer.Map">Map</h4>
+  <div class="markdown level1 summary"><p><code>Map</code> function that will be called when the database documents are indexed.</p>
+<p>A map function's job is to analyze a database document's contents and identify key/value pairs to be indexed. A given document can add a single key/value pair, multiple key/value pairs, or no key/value pairs to the index, depending on the data and what the index is indexing. The index is then used to query the database, and controls the sort order of the query results.</p>
+<p><strong>Important rules for the map function:</strong></p>
+<ul>
+<li>The function must always produce the same output for the same input</li>
+</ul>
+<p>The function's output must be consistant or the index it builds will not produce valid queries. The function must not use external information or state to make it's decisions.</p>
+<ul>
+<li>The function must be thread-safe</li>
+</ul>
+<p>The indexing will take place in a background thread or threads, and may be parallelized.</p>
+<ul>
+<li>The function cannot change external state</li>
+</ul>
+<p>In addition to causing thread-safty issues, it is unpredicable as to when the function is called or what documents are sent to it.</p>
+<p>Both the key and value passed to <code>emit</code> can be any JSON-compatible objects such as strings, numbers, booleans, arrays, dictionaries, and null</p>
+<p><strong>Sorting:</strong></p>
+<p>Sorting in the index depends on the data type of the <em>key</em>. Sorting is done in this order:</p>
+<ul>
+<li>Null</li>
+<li>Boolean: false, then true</li>
+<li>Numbers, in numeric order</li>
+<li>Strings, case-insensitive, following the [Unicode Collation Algorithm] (<a href="http://unicode.org/reports/tr10/">http://unicode.org/reports/tr10/</a>)</li>
+<li>Arrays, compared item-by-item.</li>
+<li>Dictionaries/maps, also compared item-by-item. See warning below.</li>
+</ul>
+<p>Details:</p>
+<p><em>Arrays</em> are particularly useful to achieve multiple layers of sorting, since elements are compared in order of their array index. So, all the first array elements are compaired, then all the second elements, etc. The net effect of this type of index can be a sorted structure like:</p>
+<pre><code>| Ingredient | Type            |
+|------------|-----------------|
+| Olive      | Black           |
+| Olive      | Green           |
+| Olive      | Pimento stuffed |
+| Vermouth   | Dry             |
+| Vermouth   | Extra Dry       |
+| Vermouth   | French          |
+| Vodka      | Grey Goose      |
+| Vodka      | Stoli           |
+| Vodka      | Tito&amp;apos;s          |
+</code></pre>
+<p><em>Dictionaries/maps</em> are a particularly poor type to use for sorting since JSON doesn't specify any ordering of keys, so the order of items is ambiguous. So while using dictionaries as key is technically possible, it is not recommended.</p>
+<p><strong>Values:</strong></p>
+<p>Emitting a <em>value</em> is not required, but can improve performance when querying large documents. Values are generally a subset of one or more document properties needed when a query is run against the index; for example to display search results in a grid, or to summarize a child record in a master view. This can avoid the cost of retreiving the entire document to paint a UI needing only a few values. Unlike the <em>key</em> element, dictionaries/maps is very useful type as a <em>value</em>, since they can be used to return multiple document properties in the single <em>value</em> emitted element.</p>
+<p>It is not recommended that the entire document be returned as a <em>value</em>, even in cases where the entire document will be needed by the consumer of the index. When querying the index, the Id of the document that generated the index row is always returned as part of the query results. Thus the Id can be used to retrive selected documents. Additionally, there is also the option to return the entire document in the query results as well. Retrieving the document during the query is more efficent in both storage and processing time than adding the entire docuement to the index as a <em>value</em>.</p>
+<p>There can be instances when it is useful for the query's document id to be the id of a different docuement than that which emitted the index row. This can be acheived by emiting a dictionary value where the dictionary contains a key/value pair where the key is &quot;_id&quot;, and the value is the document id of the document you want to associate with the index row, rather than the source document id.</p>
+<example>
+<pre><code> MapDelegate myMap = (document, addIndexRow) =>
+ {
+     // if the source document contains a &quot;related_documents&quot; property
+     if (document.Properties.TryGetValue(&quot;related_documents&quot;, out object property) 
+        &amp;&amp; property is IEnumerable&lt;String&lt;)
+     {
+         // for each value in &quot;related_documents&quot; (which are related document ids)
+         var relatedDocuments = property as List&lt;String&lt;;
+         foreach (var relatedDocument in relatedDocuments)
+         {
+             // add an index row with a key of type and id, and a value that changes the query results document id
+             // to the related document.
+             var key = new List&lt;object&lt;{ &quot;type&quot;, document.Id };
+             var value = new Dictionary&lt;object, object&lt; { {&quot;_id&quot;, relatedDocument} }
+             addIndexRow(key, value);
+         }
+     }
+ }
+<p>var myIndex = new Database.Index(name: &quot;myIndex&quot;, version: &quot;1&quot;, map: myMap);</code></pre>
+</example><p>
+<p>Using the map above, a query could then be run that would pass a given document Id, then receive back all the documents related to that document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MapDelegate Map { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.MapDelegate.html">MapDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_IIndexer_Name_" data-uid="PredixSDKForWindows.Storage.IIndexer.Name*"></a>
+  <h4 id="PredixSDKForWindows_Storage_IIndexer_Name" data-uid="PredixSDKForWindows.Storage.IIndexer.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Storage_IIndexer_Reduce_" data-uid="PredixSDKForWindows.Storage.IIndexer.Reduce*"></a>
+  <h4 id="PredixSDKForWindows_Storage_IIndexer_Reduce" data-uid="PredixSDKForWindows.Storage.IIndexer.Reduce">Reduce</h4>
+  <div class="markdown level1 summary"><p>An optional<code>Reduce</code> function that will be called when a database index is queried to summarize the results of the query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReduceDelegate Reduce { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PredixSDKForWindows.Storage.ReduceDelegate.html">ReduceDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PredixSDKForWindows_Storage_IIndexer_Reduce_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Reduce functions are the second half of the <a href="https://en.wikipedia.org/wiki/MapReduce">map/reduce technique</a>. They're optional, and less commonly used. A reduce function post-processes the indexed key/value pairs generated by the map function, by aggregating the values together and is commonly used to provide counts, totals, or averages.</p>
+<p>A reduce function takes an ordered list of key/value pairs, the keys and values from the index, and aggregates them together into a single object, then returns that object.</p>
+<p>For indexes that do not emit a <em>value</em>, the value array will be an array of NSNull objects.</p>
+<p><strong>Rereduce</strong></p>
+<p>The rereduce flag is used when querying large data sets. When the data set is large the underlying system will break the map/reduce into smaller chucks, run the reduce on each chunk, then run reduce again on the reduced chunks. When this happens, the rereduce flag will true, the key array will be empty, and the value array will contain the partial reduced values.</p>
+</div>
+  <h5 id="PredixSDKForWindows_Storage_IIndexer_Reduce_examples">Examples</h5>
+  <pre><code>// Given a map function that emits the &quot;type&quot; of each document...
+let myMap: Indexer.Map = { (document, addIndexRow) in
+
+    if let type = document[&quot;type&quot;] as? String {
+        addIndexRow(type, nil)
+        }
+    }
+
+    // This reduce function will summarize those types, and output a dictionary
+    // which contains each unique type and the total number of documents of that type.
+    let myReduce: Indexer.Reduce = =  { ( keys, values, rereduce) in 
+
+    var result: [String: Int] = [:]
+
+    // if this is not a rereduce
+    if !rereduce {
+        // count each unique key value
+        if let sKeys = keys as? [String] {
+            for key in sKeys {
+                var count = result[key] ?? 0
+                count += 1
+                result[key] = count
+            }
+        }
+    } else {
+        // This is a rereduce, then our value array will be an array of
+        // dictionaries of unique key values and their counts from above.
+        if let counts = values as? [[String: Int]] {
+            // for each result array
+            for count in counts {
+                // for each key in the result
+                for key in count.keys {
+                    // count and compile a final result dictionary
+                    var count = result[key] ?? 0
+                    count += 1
+                    result[key] = count
+                }
+            }
+        }
+    }
+    // return the unique key values
+    // Note that regardless of the rereduce flag the result is the same data type. This must always be the case.
+    return result
+}
+
+let myIndex = Index(name: &quot;myIndex&quot;, version: &quot;1&quot;, map: myMap, reduce: myReduce)</code></pre>
+
+  
+  
+  <a id="PredixSDKForWindows_Storage_IIndexer_Version_" data-uid="PredixSDKForWindows.Storage.IIndexer.Version*"></a>
+  <h4 id="PredixSDKForWindows_Storage_IIndexer_Version" data-uid="PredixSDKForWindows.Storage.IIndexer.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Version of the index</p>
+<ul>
+<li>important: <em>Versioning:</em></li>
+</ul>
+<p>Once created, a database index is stored as part of the data in database, for this reason, changes to an index require special handling.</p>
+<p>If any part of the <code>map</code> function or <code>reduce</code> function change, the <code>version</code> string should be changed to ensure the index is properly updated.
+Failure to change this value when updating the code will lead to unpredicable results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Version { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PushNotificationRegistration
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PushNotificationRegistration
+   ">
+    <meta name="generator" content="docfx 2.38.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration">
+  
+  
+  <h1 id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration" class="text-break">Class PushNotificationRegistration
+  </h1>
+  <div class="markdown level0 summary"><p>Handles registering device for push notifications on the Predix Push Notification service</p>
+<p>Example usage:</p>
+<pre><code>var pushRegistration = new PushNotificationRegistation(token: deviceToken, deviceId: deviceId)
+await pushRegistration.RegisterAsync(pushServiceURL, myApplicationKey)</code></pre>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="PredixSDKForWindows.Networking.PredixNetworkable.html">PredixNetworkable</a></div>
+    <div class="level2"><span class="xref">PushNotificationRegistration</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PredixSDKForWindows.Managers.PushNotifications.IPushNotificationRegistration.html">IPushNotificationRegistration</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PredixSDKForWindows.Networking.PredixNetworkable.html#PredixSDKForWindows_Networking_PredixNetworkable_HttpClient">PredixNetworkable.HttpClient</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PredixSDKForWindows.Managers.PushNotifications.html">PredixSDKForWindows.Managers.PushNotifications</a></h6>
+  <h6><strong>Assembly</strong>: PredixSDKForWindows.dll</h6>
+  <h5 id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PushNotificationRegistration : PredixNetworkable, IPushNotificationRegistration</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration__ctor_" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.#ctor*"></a>
+  <h4 id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration__ctor_System_String_System_String_System_String_" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.#ctor(System.String,System.String,System.String)">PushNotificationRegistration(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new PushNotificationRegistation structure, for registering this device and user with Push Notifications</p>
+<p>This service should be initizalized in the platform specific projects as <code data-dev-comment-type="paramref" class="paramref">token</code>, <code data-dev-comment-type="paramref" class="paramref">deviceId</code>, and <code data-dev-comment-type="paramref" class="paramref">appKey</code>
+are properties specific to each platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PushNotificationRegistration(string token, string deviceId, string appKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Push Notification registration token from the device.</p>
+<ul>
+<li>Xamarin iOS: The deviceId should be set to <code>UIDevice.CurrentDevice.IdentifierForVendor.ToString()</code></li>
+<li>Xamarin Android: Simply pass through the the token received from your Firebase instance.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">deviceId</span></td>
+        <td><p>Device identifier.</p>
+<ul>
+<li>Xamarin iOS: The deviceId should be hex encoded e.g. ToHexEncoded(deviceToken.ToArray())&quot;/&gt;</li>
+<li>Xamarin Android: e.g. FirebaseInstanceId.getInstance().getToken()</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">appKey</span></td>
+        <td><p>Application Key for the Predix Push Notification service instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_AppKey_" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.AppKey*"></a>
+  <h4 id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_AppKey" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.AppKey">AppKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AppKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_DeviceId_" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.DeviceId*"></a>
+  <h4 id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_DeviceId" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.DeviceId">DeviceId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;deviceId&quot;)]
+public string DeviceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_Token_" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.Token*"></a>
+  <h4 id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_Token" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.Token">Token</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;token&quot;)]
+public string Token { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_RegisterAsync_" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.RegisterAsync*"></a>
+  <h4 id="PredixSDKForWindows_Managers_PushNotifications_PushNotificationRegistration_RegisterAsync_System_Uri_System_String_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="PredixSDKForWindows.Managers.PushNotifications.PushNotificationRegistration.RegisterAsync(System.Uri,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">RegisterAsync(Uri, String, IDictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Exception&gt; RegisterAsync(Uri url, string userName, IDictionary&lt;string, string&gt; applicationInfo = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">applicationInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Exception</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PredixSDKForWindows.Managers.PushNotifications.IPushNotificationRegistration.html">IPushNotificationRegistration</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
