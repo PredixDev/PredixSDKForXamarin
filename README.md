@@ -2,6 +2,8 @@
 
 The Predix SDK is a .NET library designed to make developing IIoT applications for Predix for Windows and Mobile (Xamarin) fast and simple using a robust set of APIs that feel natural for a .NET developer
 
+**Note**: If not familiar with Xamarin, visit the [Getting Started](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/get-started/) guide on working with Visual Studio and Xamarin.
+
 ## Features
 
 For all of the features available in the SDK please visit the [Wiki](https://github.com/PredixDev/PredixSDKForXamarin/wiki)
